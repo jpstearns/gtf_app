@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>GtfApp</title>
+  <title>Systems | Group II</title>
+
+ <link rel="stylesheet" type="text/css" href="/assets/styles.css">
+
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
+  <!--<%= csrf_meta_tags %>-->
 <body>
-
+    <div class="header">
+    	<div class="container">
+    		<div class="logo">
+    			<h1><link href="#">Rhode Island State Police</link></h1>
+    		</div>
+    	</div>
+    	<div class="nav">
+    		<ul>
+    			<li><a href "home">Home</a></li>
+    			<li><a href "about">About Us</a></li>
+    			<li><a href "home">Sign Up</a></li>
+    			<li><a href "home">Contact Us</a></li>
+    		</ul>
+    	</div>
+    </div>
 <%= yield %>
 
 </body>
