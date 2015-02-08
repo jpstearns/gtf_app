@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+
+  get 'pages/login'
+
+  get 'pages/blog'
+
+  get 'pages/calendar'
+
+  get 'pages/about'
+
+  get 'pages/contact_us'
+
   get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,29 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-  <title>Systems | Group II</title>
+  <title>RI State Police| Charitable Gaming Unit</title>
  <link rel="stylesheet" type="text/css" href="/assets/style.css">
+ <link rel="icon" type="image/jpg" href="/assets/favicon.jpg"
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <!--<%= csrf_meta_tags %>-->
 <body>
+  <div id="wrapper">
     <div class="header">
     	<div class="container">
     		<div class="logo">
-    			<h1>Rhode Island State Police | <a href="http://www.risp.ri.gov/" style="font-size: large;">Gaming Task Force Division</a></h1>
+    			<h1>Rhode Island State Police | <a href="http://www.risp.ri.gov/" style="font-size: 25px;">Charitable Gaming Unit</a></h1>
     		</div>
     	</div>
     	<div class="nav">
-    		<ul "style= color: white;">
-    			<li><a href "home">Home</a></li>
-    			<li><a href "about">About Us</a></li>
-    			<li><a href "home">Sign Up</a></li>
-    			<li><a href "home">Contact Us</a></li>
+    		<ul>
+    			<li><a href "home">Home |</a></li>
+    			<li><a href "about">| About |</a></li>
+    			<li><a href "signup">| Sign Up |</a></li>
+    			<li><a href "contact">| Contact Us</a></li>
     		</ul>
     	</div>
     </div>
+    <div class=content>
 <%= yield %>
+    </div>
+    <!-- Footer -->
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <section class="3u 6u(narrower) 12u$(mobilep)">
+              <h3>Contact Information</h3>
+              <ul class="links">
+                <li>RHODE ISLAND STATE POLICE</li>
+                <li>Charitable Gaming Unit</li>
+                <li>331 Danielson Pike</li>
+                <li>North Scituate, RI 02857</li>
+                <li>______________________<li>
+                <li>phone: (401) 444-1147</li>
+                <li>fax:   (401) 444-1097</li>
+              </ul>
+            </section>
+            <section class="3u 6u$(narrower) 12u$(mobilep)">
+              <h3>State Police Links</h3>
+              <ul class="links">
+                <li><a href="#">Duis neque nisi dapibus</a></li>
+                <li><a href="#">Sed et dapibus quis</a></li>
+                <li><a href="#">Rutrum accumsan sed</a></li>
+                <li><a href="#">Mattis et sed accumsan</a></li>
+                <li><a href="#">Duis neque nisi sed</a></li>
+                <li><a href="#">Sed et dapibus quis</a></li>
+                <li><a href="#">Rutrum amet varius</a></li>
+              </ul>
+            </section>
+            <section class="6u 12u(narrower)">
+              <h3>Get In Touch</h3>
+              <form>
+                <div class="row 50%">
+                  <div class="6u 12u(mobilep)">
+                    <input type="text" name="name" id="name" placeholder="Name" />
+                  </div>
+                  <div class="6u 12u(mobilep)">
+                    <input type="email" name="email" id="email" placeholder="Email" />
+                  </div>
+                </div>
+                <div class="row 50%">
+                  <div class="12u">
+                    <textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+                  </div>
+                </div>
+                <div class="row 50%">
+                  <div class="12u">
+                    <ul class="actions">
+                      <li><input type="submit" class="button alt" value="Send Message" /></li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
 
+        <!-- Icons -->
+          <ul class="icons">
+            <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+            <li><a href="#" class="icon fa-google-plus"><span class="label">Google+</span></a></li>
+          </ul>
+
+        <!-- Copyright -->
+          <div class="copyright">
+            <ul class="menu">
+              <li> | &copy; RI State Police : All Rights Reserved </li><li>| Designed By: <a href="http://github.com/jpstearns/gtf_app">CCRI Systems Analysis Group II |</a></li>
+            </ul>
+          </div>
+
+      </div>
+  </div>
 </body>
 </html>
