@@ -911,12 +911,12 @@ li{
 				}
 
 		#footer .copyright {
-			color: #999999;
+			color: navy;
 			width: 50%;
 			margin: 0 auto;
 		}
 		#footer .copyright a{
-			color: #999999;
+			color: navy;
 		}
 		#footer .copyright a:hover{
 			color: #37C0FB;
