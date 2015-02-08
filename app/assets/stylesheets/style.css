@@ -273,7 +273,7 @@ li{
 	list-style: none;
 	float: left;
 	margin-left: 0px;
-	padding-top: 15px;
+	padding-top: 5px;
 }
 .nav{
 	float: right;
@@ -860,16 +860,29 @@ li{
 /* Footer */
 
 	#footer {
-		padding: 4em 0 8em 0;
+		padding: 1em 0 2em 0;
+		background: -moz-linear-gradient(-45deg,  rgba(125,185,232,0) 0%, rgba(30,87,153,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(125,185,232,0)), color-stop(100%,rgba(30,87,153,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(-45deg,  rgba(125,185,232,0) 0%,rgba(30,87,153,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(-45deg,  rgba(125,185,232,0) 0%,rgba(30,87,153,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(-45deg,  rgba(125,185,232,0) 0%,rgba(30,87,153,1) 100%); /* IE10+ */
+        background: linear-gradient(135deg,  rgba(125,185,232,0) 0%,rgba(30,87,153,1) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007db9e8', endColorstr='#1e5799',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+		
 	}
 
+		#footer li {
+			font-size: 12pt;
+		}
 		#footer a {
-			color: inherit;
+			color: navy;
 			border-bottom-color: rgba(71, 71, 71, 0.25);
+			font-size: 12pt;
 		}
 
 			#footer a:hover {
-				color: #37c0fb;
+				color: #37C0FB;
 				border-bottom-color: transparent;
 			}
 
