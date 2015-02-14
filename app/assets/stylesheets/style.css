@@ -254,6 +254,7 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	color: black;
+	background-image: url('assets/casino.jpg');
 }
 
 .header{
@@ -909,6 +910,11 @@ li{
 				#footer .icons a:hover {
 					color: #474747;
 				}
+			#footer img{
+				    border: none;
+    				display: block;
+    				margin: 0 auto;
+			}
 
 		#footer .copyright {
 			color: gray;
