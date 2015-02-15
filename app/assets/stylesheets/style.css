@@ -337,7 +337,7 @@
 		}
 
 	ul.links li {
-		line-height: 2.5em;
+		line-height: 1.5em;
 	}
 
 	ul.icons {
@@ -807,7 +807,7 @@
 /* Footer */
 
 	#footer {
-		padding: 4em 0 8em 0;
+		padding: 4em 0 2em 0;
 		background: -moz-linear-gradient(-45deg, rgba(30,87,153,1) 0%, rgba(125,185,232,0) 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,0))); /* Chrome,Safari4+ */
 		background: -webkit-linear-gradient(-45deg, rgba(30,87,153,1) 0%,rgba(125,185,232,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -828,6 +828,8 @@
 			}
 		#footer li{
 			color: black;
+			padding: 5px;
+			font-size: 14pt;
 		}
 
 		#footer .container {
