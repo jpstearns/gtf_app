@@ -1,16 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users
-  get 'pages/home'
-
-  get 'pages/login'
-
-  get 'pages/blog'
-
-  get 'pages/calendar'
-
-  get 'pages/about'
-
-  get 'pages/contact_us'
 
   get 'welcome/index'
 
