@@ -6,10 +6,12 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag :defaults %>
   <!--<%= csrf_meta_tags %>-->
       <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
+    <%= csrf_meta_tags %>
     <script src="/assets/jquery.min.js"></script>
     <script src="/assets/jquery.dropotron.min.js"></script>
     <script src="/assets/skel.min.js"></script>
@@ -29,6 +31,15 @@
 
         <!-- Nav -->
           <nav id="nav">
+<p class="navbar-text pull-right">
+<% if user_signed_in? %>
+  Logged in as <strong><%= current_user.email %></strong>.
+  <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+<% else %>
+  <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+  <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+<% end %>
             <ul>
               <li class="current"><a href="index.html">Home</a></li>
               <li>
@@ -50,15 +61,20 @@
                   <li><a href="#">Veroeros feugiat</a></li>
                 </ul>
               </li>
-              <li><a href="">Sign Up</a>
               <li><a href="left-sidebar.html">Contact Us</a></li>
               <li><a href="right-sidebar.html">About Us</a></li>
               <li><a href="two-sidebar.html">Forms</a></li>
-              <li><a href="#">Sign In</a></li>
             </ul>
           </nav>
 
       </div>
+    <!--Devise User Auth-->
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
 
 <%= yield %>
     </div>

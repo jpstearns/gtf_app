@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'say/hello'
+
   devise_for :users
   devise_for :installs
   get 'welcome/index'
