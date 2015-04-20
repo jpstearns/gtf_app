@@ -1,7 +1,47 @@
-Enter new investigation information
+<h1>New Investigations</h1>
 
-<% form_for @investigation do |f| -%>
-	Firstname: <%= f.text_field :firstname %><br/>
-	Lastname: <%= f.text_field :lastname %>
-	<%= f.submit %>
-<% end -%>
+
+<%= form_for investigations_path, :method => "POST" do %>
+
+	<%= label_tag :name, "Applicant name: " %> 
+	<%= text_field_tag :name, @name %> <br>
+
+	<%= label_tag :email, "Applicant email: " %>
+	<%= email_field_tag :email, @email %> <br>
+
+	<%= label_tag :dob, "Applicant DOB: " %>
+	<%= date_field_tag :dob, @dob %> <br>
+	
+	<%= label_tag :address, "Address line 1: " %> 
+	<%= text_field_tag :address, @address %> <br>
+
+	<%= label_tag :line2, "Address line 2: " %> 
+	<%= text_field_tag :line2, @line2 %> <br>
+
+	<%= label_tag :city, "City: " %> 
+	<%= text_field_tag :city, @city %><br>
+
+	<%= label_tag :state, "State: " %> 
+	<%= text_field_tag :state, @state %><br>
+
+	<%= label_tag :zip, "Zip Code: " %> 
+	<%= text_field_tag :zip, @zip %><br>
+
+	<%= label_tag :phone1, "Primary Phone: " %> 
+	<%= text_field_tag :phone1, @phone1 %><br>
+
+	<%= label_tag :phone2, "Secondary Phone: " %> 
+	<%= text_field_tag :phone2, @phone2 %><br>
+
+
+	<%= label_tag :comments, "Additional comments: " %><br>
+	<%=text_area_tag :comments, @comments, :sixe => "50X100" %> <br>
+
+
+
+
+	<%= submit_tag "Create" %>
+
+
+<% end %>
+

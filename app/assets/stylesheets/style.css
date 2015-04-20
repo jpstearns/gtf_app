@@ -161,6 +161,7 @@
 /* Form */
 
 	input[type="text"],
+	input[type="date"]
 	input[type="password"],
 	input[type="email"],
 	textarea {
@@ -181,7 +182,8 @@
 		display: block;
 		outline: 0;
 		padding: 0.75em;
-		text-decoration: none;	
+		text-decoration: none;
+		width: 50%;	
 	}
 
 		input[type="text"]:focus,
@@ -197,8 +199,9 @@
 		line-height: 1em;
 	}
 
+
 	label {
-		display: block;
+		float: left;
 		color: inherit;
 		font-weight: 600;
 		line-height: 1.75em;
@@ -466,6 +469,7 @@
 		text-decoration: none;
 		font-weight: 600;
 		letter-spacing: -0.025em;
+		width: 10%;
 	}
 
 		input[type="submit"]:hover,

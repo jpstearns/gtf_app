@@ -1,8 +1,18 @@
 Rails.application.routes.draw do
+  get 'investigations/edit'
+
+  get 'investigations/index'
+
+  get 'investigations/new'
+
+  get 'investigations/show'
+
+  post 'investigations/new'
+
   devise_for :users
   devise_for :installs
   get 'welcome/index'
-  resource :investigations
+  resources :investigations
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

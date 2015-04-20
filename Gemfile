@@ -12,7 +12,7 @@ group :production do
   gem 'rails_12factor'
 end
 #Use simple form to handle forms
-gem 'simple_form'
+#gem 'simple_form'
 #Use Devise for User Auth
 gem 'devise'
 # Use SCSS for stylesheets

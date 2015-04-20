@@ -1,12 +1,37 @@
 class InvestigationsController < ApplicationController
-	def new
-		@investigation = Investigation.new
-	end
+  
 
-	def create
-		@investigation = Investigation.new(params[:investigation])
-		if @investigation.save
-			redirect_to new_investigation_path
-		end
-	end
+  def index
+  end 
+ 
+  def show
+  end
+
+  def new
+    @name = params["name"]
+    @email = params["email"]
+    @address = params["address"]
+    @line2 = params["line2"]
+    @city = params["city"]
+    @state = params["state"]
+    @zip = params["zip"]
+    @phone1 = params["phone1"]
+    @phone2 = params["phone2"]
+    @company = params["company"]
+    @comments = params["comments"]
+    
+
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
 end
