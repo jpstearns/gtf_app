@@ -42,15 +42,23 @@
 										</header>
 										<%= form_for investigations_path, :method => "POST" do %>
 
-											<%= label_tag :name, "Applicant name: " %> 
-											<%= text_field_tag :name, @name %> <br>
+											<%= label_tag :firstname, "Applicant First name: " %> 
+											<%= text_field_tag :firstname, @firstname %> <br>
 
-											<%= label_tag :dob, "Applicant DOB: " %>
+											<%= label_tag :lastname, "Applicant Last name: " %> 
+											<%= text_field_tag :lastname, @lastname %> <br>
+											
+											<%= label_tag :social, "Social Security Number: " %> 
+											<%= text_field_tag :social, @social %> <br>
+											
+											<%= label_tag :dob, "Date of Birth: " %>
 											<%= date_field_tag :dob, @dob %> <br>
+											
+											<%= label_tag :social, "Previous Employer: " %>
+											<%= text_field_tag :social, @social %> <br>											
 
 										<% end %>
-										<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
-
+										<span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
 										
 									</article>
 

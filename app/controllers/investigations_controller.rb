@@ -8,7 +8,8 @@ class InvestigationsController < ApplicationController
   end
 
   def new
-    @name = params["name"]
+    @firstname = params["firstname"]
+    @lastname = params["lastname"]
     @email = params["email"]
     @address = params["address"]
     @line2 = params["line2"]
