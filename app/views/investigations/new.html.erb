@@ -8,7 +8,7 @@
 								<!-- Sidebar 1 -->
 
 									<section>
-										<h3>Just a Subheading</h3>
+										<h3>Your Current Assignments</h3>
 										<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
 										Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
 										Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis et nisi etiam.</p>
@@ -45,32 +45,8 @@
 											<%= label_tag :name, "Applicant name: " %> 
 											<%= text_field_tag :name, @name %> <br>
 
-											<%= label_tag :email, "Applicant email: " %>
-											<%= email_field_tag :email, @email %> <br>
-
 											<%= label_tag :dob, "Applicant DOB: " %>
 											<%= date_field_tag :dob, @dob %> <br>
-											
-											<%= label_tag :address, "Address line 1: " %> 
-											<%= text_field_tag :address, @address %> <br>
-
-											<%= label_tag :line2, "Address line 2: " %> 
-											<%= text_field_tag :line2, @line2 %> <br>
-
-											<%= label_tag :city, "City: " %> 
-											<%= text_field_tag :city, @city %><br>
-
-											<%= label_tag :state, "State: " %> 
-											<%= text_field_tag :state, @state %><br>
-
-											<%= label_tag :zip, "Zip Code: " %> 
-											<%= text_field_tag :zip, @zip %><br>
-
-											<%= label_tag :phone1, "Primary Phone: " %> 
-											<%= text_field_tag :phone1, @phone1 %><br>
-
-											<%= label_tag :phone2, "Secondary Phone: " %> 
-											<%= text_field_tag :phone2, @phone2 %><br>
 
 										<% end %>
 										<span class="image featured"><img src="images/banner.jpg" alt="" /></span>
@@ -86,19 +62,22 @@
 								<!-- Sidebar 2 -->
 
 									<section>
-										<h3>Your Current Assignments</h3>
-										<ul class="links">
-											<li><a href="#">Amet turpis, feugiat sit amet</a></li>
-											<li><a href="#">Ornare in hendrerit lectus</a></li>
-											<li><a href="#">Semper mod quis eget dolore</a></li>
-											<li><a href="#">Consequat lorem phasellus</a></li>
-											<li><a href="#">Amet turpis feugiat amet</a></li>
-											<li><a href="#">Semper mod quisturpis nisi</a></li>
-										</ul>
-										<footer>
-											<a href="#" class="button">More Random Links</a>
-										</footer>
-									</section>
+										<h3>Address Information</h3>
+										
+											<%= label_tag :address, "Address line 1: " %> 
+											<%= text_field_tag :address, @address %> <br>
+
+											<%= label_tag :line2, "Address line 2: " %> 
+											<%= text_field_tag :line2, @line2 %> <br>
+
+											<%= label_tag :city, "City: " %> 
+											<%= text_field_tag :city, @city %><br>
+
+											<%= label_tag :state, "State: " %> 
+											<%= text_field_tag :state, @state %><br>
+
+											<%= label_tag :zip, "Zip Code: " %> 
+											<%= text_field_tag :zip, @zip %><br>
 
 									<section>
 										<%= label_tag :comments, "Additional comments: " %>
