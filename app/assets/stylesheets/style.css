@@ -169,7 +169,7 @@
 /* Form */
 
 	input[type="text"],
-	input[type="date"]
+	input[type="date"],
 	input[type="password"],
 	input[type="email"],
 	textarea {
