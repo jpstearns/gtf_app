@@ -1,0 +1,7 @@
+Enter new investigation information
+
+<% form_for @investigation do |f| -%>
+	Firstname: <%= f.text_field :firstname %><br/>
+	Lastname: <%= f.text_field :lastname %>
+	<%= f.submit %>
+<% end -%>
