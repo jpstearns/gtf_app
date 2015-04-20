@@ -27,7 +27,7 @@
 		animation: none !important;
 	}
 
-	body, input, select, textarea {
+	body, select, textarea {
 		color: #474747;
 		font-family: 'Source Sans Pro', sans-serif;
 		font-size: 16pt;
@@ -35,7 +35,15 @@
 		line-height: 1.65em;
 		width: 100%;
 	}
-
+	
+	input{		
+		color: #474747;
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 16pt;
+		font-weight: 300;
+		line-height: 1.65em;
+		width: 50%;
+	} 
 	a {
 		-moz-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
 		-webkit-transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out, opacity 0.2s ease-in-out;
@@ -201,7 +209,7 @@
 
 
 	label {
-		float: left;
+		display: block;
 		color: inherit;
 		font-weight: 600;
 		line-height: 1.75em;
