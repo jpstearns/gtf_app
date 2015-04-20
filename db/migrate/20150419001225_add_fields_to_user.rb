@@ -1,4 +1,4 @@
-fclass AddFieldsToUser < ActiveRecord::Migration
+class AddFieldsToUser < ActiveRecord::Migration
   def change
   	    add_column :users, :first_name, :string
         add_column :users, :last_name, :string
@@ -6,6 +6,5 @@ fclass AddFieldsToUser < ActiveRecord::Migration
         add_column :users, :phone_number, :number
         add_column :users, :desk_extenstion, :number
         add_column :users, :rank, :string
-
   end
 end
