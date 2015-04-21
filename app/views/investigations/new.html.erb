@@ -1,8 +1,14 @@
+<pre>
+	<% params.each do |key, value| %>
+		<%= key + " ==> " + value %>
+	<% end %>
+</pre>
 <!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
 					<div class="row 200%">
 						<div class="3u 12u(narrower)">
+							<%= form_for investigations_path, :method => "POST" do %>
 							<div id="sidebar1">
 
 								<!-- Sidebar 1 -->
@@ -60,9 +66,7 @@
 											<%= label_tag :social, "Previous Employer: " %>
 											<%= text_field_tag :social, @social %> <br>											
 											<%= label_tag :comments, "Additional comments: " %>
-											<%=text_area_tag :comments, @comments, :sixe => "50X100" %> 
-										<% end %>
-										
+											<%=text_area_tag :comments, @comments, :sixe => "50X100" %>
 									</article>
 
 							</div>
@@ -92,9 +96,11 @@
 
 									<section>
 											<%= submit_tag "Submit" %>
+											<% end %>
 									</section>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+<%end%>
