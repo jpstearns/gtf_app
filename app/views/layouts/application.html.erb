@@ -41,9 +41,8 @@
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
             <ul>
-              <li class="current"><a href="index.html">Home</a></li>
-              <li>
-                <a href="">Dropdown</a>
+              <li class = "current"> <%= link_to "Home", root_path %></li>
+               <li> <a href="">Dropdown</a>
                 <ul>
                   <li><a href="#">Lorem dolor</a></li>
                   <li><a href="#">Magna phasellus</a></li>
@@ -63,7 +62,7 @@
               </li>
               <li><a href="left-sidebar.html">Contact Us</a></li>
               <li><a href="right-sidebar.html">About Us</a></li>
-              <li><a href="two-sidebar.html">Forms</a></li>
+              <li><%= link_to "Forms", investigations_new_path %></li>
             </ul>
           </nav>
 

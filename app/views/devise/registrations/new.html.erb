@@ -1,19 +1,60 @@
-<h2>Sign up</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= f.error_notification %>
-  
+<!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row 200%">
+            <div class="4u 12u(narrower)">
+              <div id="sidebar">
 
-  <div class="form-inputs">
-    <%= f.input :email, required: true, autofocus: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
-    <%= f.input :password_confirmation, required: true %>
+                <!-- Sidebar -->
 
-  </div>
-	<br><br>
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
-  </div>
-<% end %>
+                  <section>
+                    <h3>Welcome to the Application</h3>
+                    <p>When you click the submit button you will be sent a confirmation email. Follow the link to verify your account. This Application is designed to handle and process the background investigations for Rhode Island Gaming Employees.</p>
+                    <footer>
+                      <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+                    </footer>
+                  </section>
 
-<%= render "devise/shared/links" %>
+                  <section>
+                    <h3>Important Links</h3>
+                    <ul class="links">
+                      <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+                      <li><a href="#">Ornare in hendrerit in lectus</a></li>
+                      <li><a href="#">Semper mod quis eget mi dolore</a></li>
+                      <li><a href="#">Consequat etiam lorem phasellus</a></li>
+                      <li><a href="#">Amet turpis, feugiat et sit amet</a></li>
+                      <li><a href="#">Semper mod quisturpis nisi</a></li>
+                    </ul>
+
+              </div>
+            </div>
+            <div class="8u  12u(narrower) important(narrower)">
+              <div id="content">
+
+                <!-- Content -->
+
+                  <article>
+                    <header>
+                      <h2>Sign Up</h2>
+                      <p>Fill out the forms to start using the app today!</p>
+                    </header>
+                      <div class="form-inputs">
+                          <%= f.input :email, required: true, autofocus: true %>
+                          <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
+                          <%= f.input :password_confirmation, required: true %>
+                      </div>
+                        <br><br>
+                        <div class="form-actions">
+                          <%= f.button :submit, "Sign up" %>
+                        </div>
+                      <% end %>
+                  </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
