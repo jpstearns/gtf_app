@@ -1,4 +1,4 @@
-<pre>
+ 	<pre>
 	<% params.each do |key, value| %>
 		<%= key + " ==> " + value %>
 	<% end %>
@@ -49,6 +49,8 @@
 											<h2>New Applicant</h2>
 											<p>Welcome lets begin a new application</p>
 										</header>
+											<%= radio_button_tag :type, "Business", @type %>Business <br>
+											<%= radio_button_tag :type, "Individual", @type %>Individual<br>	
 
 											<%= label_tag :firstname, "Applicant First name: " %> 
 											<%= text_field_tag :firstname, @firstname %> <br>
@@ -62,7 +64,7 @@
 											<%= label_tag :dob, "Date of Birth: " %>
 											<%= date_field_tag :dob, @dob %> <br>
 											
-											<%= label_tag :social, "Previous Employer: " %>
+											<%= label_tag :social, "Affliated Company: " %>
 											<%= text_field_tag :social, @social %> <br>											
 											<%= label_tag :comments, "Additional comments: " %>
 											<%=text_area_tag :comments, @comments, :sixe => "50X100" %>
