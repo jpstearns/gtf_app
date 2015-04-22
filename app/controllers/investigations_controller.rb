@@ -2,6 +2,7 @@ class InvestigationsController < ApplicationController
   
 
   def index
+    @investigations = Investigation.all
   end 
  
   def show
@@ -11,8 +12,8 @@ class InvestigationsController < ApplicationController
     @submited = params["commit"]
     @firstname = params["firstname"]
     @lastname = params["lastname"]
-    if @lastname == ""
-      @error_msg = "Must enter your name"
+    if @lastname == "" || @firstname == ""
+      flash.now['error'] = "Must enter your name"
     end
     @social=params["social"]
     @email = params["email"]
@@ -30,6 +31,7 @@ class InvestigationsController < ApplicationController
   end
 
   def create
+    @investigation = Investigations.new(investigation_params)
   end
 
   def edit

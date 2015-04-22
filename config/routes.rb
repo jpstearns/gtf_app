@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :applicants
+
   get 'jason/jasons_hang_out'
 
   get 'clients/edit'

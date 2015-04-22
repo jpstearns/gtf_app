@@ -1,0 +1,94 @@
+<section class="wrapper style1">
+        <div class="container">
+          <div id="content">
+
+            <!-- Content -->
+
+              <article>
+                <header>
+                  <h2>Application Submitted</h2>
+                  <p>Please take the time to review the application</p>
+                </header>
+                    <p>
+                      <strong>First name:</strong>
+                      <%= @applicant.first_name %>
+                    </p>
+
+                    <p>
+                      <strong>Last name:</strong>
+                      <%= @applicant.last_name %>
+                    </p>
+
+                    <p>
+                      <strong>Social:</strong>
+                      <%= @applicant.social %>
+                    </p>
+
+                    <p>
+                      <strong>Email:</strong>
+                      <%= @applicant.email %>
+                    </p>
+
+                    <p>
+                      <strong>Address:</strong>
+                      <%= @applicant.address %>
+                    </p>
+
+                    <p>
+                      <strong>Line2:</strong>
+                      <%= @applicant.line2 %>
+                    </p>
+
+                    <p>
+                      <strong>City:</strong>
+                      <%= @applicant.city %>
+                    </p>
+
+                    <p>
+                      <strong>State:</strong>
+                      <%= @applicant.state %>
+                    </p>
+
+                    <p>
+                      <strong>Zip:</strong>
+                      <%= @applicant.zip %>
+                    </p>
+
+                    <p>
+                      <strong>Phone1:</strong>
+                      <%= @applicant.phone1 %>
+                    </p>
+
+                    <p>
+                      <strong>Phone2:</strong>
+                      <%= @applicant.phone2 %>
+                    </p>
+
+                    <p>
+                      <strong>Company:</strong>
+                      <%= @applicant.company %>
+                    </p>
+
+                    <p>
+                      <strong>Comments:</strong>
+                      <%= @applicant.comments %>
+                    </p>
+
+                    <p>
+                      <strong>Dob:</strong>
+                      <%= @applicant.dob %>
+                    </p>
+
+                    <p>
+                      <strong>Type:</strong>
+                      <%= @applicant.type %>
+                    </p>
+
+                    <%= link_to 'Edit', edit_applicant_path(@applicant) %> |
+                    <%= link_to 'Back', applicants_path %>
+
+              </article>
+
+          </div>
+        </div>
+      </section>

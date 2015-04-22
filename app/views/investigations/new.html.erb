@@ -1,9 +1,11 @@
+ <% if flash['error']%>
+	<%= flash['error']%>
+<% end %>
  	<pre>
 	<% params.each do |key, value| %>
 		<%= key + " ==> " + value %>
 	<% end %>
 </pre>
-
 <% if !@submited %>
 <!-- Main -->
 			<section class="wrapper style1">
@@ -26,7 +28,7 @@
 
 									<section>
 										<h3>Contact Information</h3>
-											<%= label_tag :email, "Applicant email: " %>
+											<%= label_tag :email, "Applicant Email: " %>
 											<%= email_field_tag :email, @email %> <br>
 											
 											<%= label_tag :phone1, "Primary Phone: " %> 
@@ -52,10 +54,10 @@
 											<%= radio_button_tag :type, "Business", @type %>Business <br>
 											<%= radio_button_tag :type, "Individual", @type %>Individual<br>	
 
-											<%= label_tag :firstname, "Applicant First name: " %> 
+											<%= label_tag :firstname, "Applicant First Name: " %> 
 											<%= text_field_tag :firstname, @firstname %> <br>
 
-											<%= label_tag :lastname, "Applicant Last name: " %> 
+											<%= label_tag :lastname, "Applicant Last Name: " %> 
 											<%= text_field_tag :lastname, @lastname %> <br>
 											
 											<%= label_tag :social, "Social Security Number: " %> 

@@ -1,0 +1,75 @@
+<%= simple_form_for(@applicant) do |f| %>
+  <%= f.error_notification %>
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row 200%">
+            <div class="3u 12u(narrower)">
+              <div id="sidebar1">
+
+                <!-- Sidebar 1 -->
+
+                  <section>
+                    <h3>The Rhode Island Gaming App</h3>
+                    <p>Welcome to a one stop integrated application for Rhode Island Gaming employees. Please fill out the application below to begin the Background Investigation Process.</p>
+                    <footer>
+                      <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+
+                    </footer>
+                  </section>
+
+                  <section>
+                    <h3>Contact Information</h3>
+                      <%= radio_button_tag :type, "Business", @type %>Business 
+                      <%= radio_button_tag :type, "Individual", @type %>Individual<br> 
+                      <%= f.input :email, placeholder: "user@domain.com" %>
+                      <%= f.input :phone1, label:"Primary Phone: " %>
+                      <%= f.input :phone2, label: "Secondary Phone: "%> 
+                      
+                  </section>
+
+              </div>
+            </div>
+            <div class="6u 12u(narrower) important(narrower)">
+              <div id="content">
+
+                <!-- Content -->
+
+                  <article>
+                    <header>
+                      <h2>New Applicant</h2>
+                      <p>Welcome lets begin a new application</p>
+                    </header>
+                      <%= f.input :first_name %>
+                      <%= f.input :last_name %>
+                      <%= f.input :social %>
+                      <%= f.input :dob %>
+                      <%= f.input :company, label: "Affiliated Company" %>
+                      <%= f.input :comments %>
+                  </article>
+
+              </div>
+            </div>
+            <div class="3u 12u(narrower)">
+              <div id="sidebar2">
+
+                <!-- Sidebar 2 -->
+
+                  <section>
+                    <h3>Address Information</h3>
+                    
+                        <%= f.input :address %>
+                        <%= f.input :line2 %>
+                        <%= f.input :city %>
+                        <%= f.input :state %>
+                        <%= f.input :zip %><br>
+
+                    <div class="form-actions">
+                      <%= f.button :submit, label:"Submit"%>
+                    </div>
+                  </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<% end %>

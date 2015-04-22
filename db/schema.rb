@@ -11,7 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150422054347) do
+ActiveRecord::Schema.define(version: 20150422182723) do
+
+  create_table "applicants", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "social"
+    t.string   "email"
+    t.string   "address"
+    t.string   "line2"
+    t.string   "city"
+    t.string   "state"
+    t.integer  "zip"
+    t.string   "phone1"
+    t.string   "phone2"
+    t.string   "company"
+    t.text     "comments"
+    t.string   "dob"
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "cases", force: :cascade do |t|
     t.string   "badge_num"
@@ -90,8 +110,8 @@ ActiveRecord::Schema.define(version: 20150422054347) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "badge_number"
-    t.decimal  "phone_number"
-    t.decimal  "desk_extenstion"
+    t.string   "phone_number"
+    t.string   "desk_extenstion"
     t.string   "rank"
   end
 
