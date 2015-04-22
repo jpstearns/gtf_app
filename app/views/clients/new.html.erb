@@ -1,0 +1,66 @@
+
+<% if !@submited %>
+<section class="wrapper style1">
+				<div class="container">
+					<div class="row 200%">
+						<div class="8u 12u(narrower)">
+							<div id="content">
+
+								<!-- Content -->
+
+									<article>
+										<header>
+											<h2>New Client Application</h2>
+											<p>Welcome lets begin your Client Application.</p>
+										</header>
+										<%= form_for investigations_path, :method => "POST" do %>
+											<%= label_tag :clientName, "Client Name: " %>
+											<%= text_field_tag :clientName, @clientName%> <br>
+											<%= label_tag :clientAddress1, "Address line 1: " %> 
+											<%= text_field_tag :clientAddress1, @clientAddress1 %> <br>
+											<%= label_tag :clientAddress2, "Address line 2: " %> 
+											<%= text_field_tag :clientAddress2, @clientAddress2%> <br>
+											<%= label_tag :clientCity, "City: " %> 
+											<%= text_field_tag :clientCity, @clientCity %><br>
+											<%= label_tag :clientState, "State: " %> 
+											<%= text_field_tag :clientState, @clientState %><br>
+											<%= label_tag :clientZip, "Zip Code: " %> 
+											<%= text_field_tag :clientZip, @iclientZip %><br>
+									</article>
+
+							</div>
+						</div>
+						<div class="4u 12u(narrower)">
+							<div id="sidebar">
+
+								<!-- Sidebar -->
+
+									<section>
+										<h3>The Rhode Island Gaming Application</h3>
+											<p> Welcome to the online integrated application designed to process the licensing applications of employees and businesses at the casinos.</p>
+										<footer>
+										<span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+										</footer>
+									</section>
+
+									<section>
+											<h3>Contact Information</h3>
+											<%= label_tag :clientPhone, "Client Phone: " %> 
+											<%= text_field_tag :clientPhone, @clientPhone1 %><br>
+											<%= label_tag :clientEmail, "Client Email: " %> 
+											<%= email_field_tag :clientEmail, @clientEmail %><br>
+									</section>
+									<section>
+											<%= submit_tag "Submit" %>
+											<%end%>
+									</section>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+<%else%>
+Thank you for submiting your application for review.
+<%end%>

@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'clients/edit'
+
+  get 'clients/index'
+
+  get 'clients/new'
+
+  get 'clients/show'
+
+  get 'about_us/about'
+
   get 'investigations/edit'
 
   get 'investigations/index'
