@@ -8,13 +8,12 @@ class InvestigationsController < ApplicationController
   end
 
   def new
-    @submitted = params["commit"]
+    @submited = params["commit"]
     @firstname = params["firstname"]
     @lastname = params["lastname"]
     if @lastname == ""
       @error_msg = "Must enter your name"
     end
-
     @social=params["social"]
     @email = params["email"]
     @address = params["address"]

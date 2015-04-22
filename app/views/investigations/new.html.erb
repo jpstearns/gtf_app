@@ -3,6 +3,8 @@
 		<%= key + " ==> " + value %>
 	<% end %>
 </pre>
+
+<% if !@submited %>
 <!-- Main -->
 			<section class="wrapper style1">
 				<div class="container">
@@ -49,7 +51,6 @@
 											<h2>New Investigation</h2>
 											<p>Welcome Detective lets begin a new application</p>
 										</header>
-										<%= form_for investigations_path, :method => "POST" do %>
 
 											<%= label_tag :firstname, "Applicant First name: " %> 
 											<%= text_field_tag :firstname, @firstname %> <br>
@@ -96,11 +97,13 @@
 
 									<section>
 											<%= submit_tag "Submit" %>
-											<% end %>
+											<%end%>
 									</section>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+<%else%>
+	Thanks for submitting a new investigation for approval.
 <%end%>
