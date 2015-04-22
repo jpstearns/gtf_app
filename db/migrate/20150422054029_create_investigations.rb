@@ -3,8 +3,8 @@ class CreateInvestigations < ActiveRecord::Migration
     create_table :investigations do |t|
       t.string :first_name
       t.string :last_name
-      t.number :social
-      t.date :dob
+      t.string :social
+      t.string :dob
       t.string :previous_employer
       t.string :email
       t.string :phone1
@@ -13,7 +13,7 @@ class CreateInvestigations < ActiveRecord::Migration
       t.string :address_line2
       t.string :city
       t.string :state
-      t.number :zip
+      t.string :zip
       t.string :comments
 
       t.timestamps null: false

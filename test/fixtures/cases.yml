@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  badge_num: MyString
+  social: MyString
+  client_id: MyString
+  status: MyString
+  licensetype: MyString
+  positionOfApplication: MyString
+  renewal: MyString
+
+two:
+  badge_num: MyString
+  social: MyString
+  client_id: MyString
+  status: MyString
+  licensetype: MyString
+  positionOfApplication: MyString
+  renewal: MyString

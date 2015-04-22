@@ -11,7 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150420042053) do
+ActiveRecord::Schema.define(version: 20150422054347) do
+
+  create_table "cases", force: :cascade do |t|
+    t.string   "badge_num"
+    t.string   "social"
+    t.string   "client_id"
+    t.string   "status"
+    t.string   "licensetype"
+    t.string   "positionOfApplication"
+    t.string   "renewal"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  create_table "clients", force: :cascade do |t|
+    t.string   "client_name"
+    t.string   "client_phone"
+    t.string   "client_email"
+    t.string   "client_address"
+    t.string   "client_address2"
+    t.string   "client_state"
+    t.string   "client_zip"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+  end
 
   create_table "installs", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -32,10 +56,22 @@ ActiveRecord::Schema.define(version: 20150420042053) do
   add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
 
   create_table "investigations", force: :cascade do |t|
-    t.string   "firstname"
-    t.string   "lastname"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "social"
+    t.string   "dob"
+    t.string   "previous_employer"
+    t.string   "email"
+    t.string   "phone1"
+    t.string   "phone2"
+    t.string   "address_line1"
+    t.string   "address_line2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "comments"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
   end
 
   create_table "users", force: :cascade do |t|

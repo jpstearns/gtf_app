@@ -3,8 +3,8 @@
 one:
   first_name: MyString
   last_name: MyString
-  social: 
-  dob: 2015-04-22
+  social: MyString
+  dob: MyString
   previous_employer: MyString
   email: MyString
   phone1: MyString
@@ -13,14 +13,14 @@ one:
   address_line2: MyString
   city: MyString
   state: MyString
-  zip: 
+  zip: MyString
   comments: MyString
 
 two:
   first_name: MyString
   last_name: MyString
-  social: 
-  dob: 2015-04-22
+  social: MyString
+  dob: MyString
   previous_employer: MyString
   email: MyString
   phone1: MyString
@@ -29,5 +29,5 @@ two:
   address_line2: MyString
   city: MyString
   state: MyString
-  zip: 
+  zip: MyString
   comments: MyString
