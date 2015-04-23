@@ -18,7 +18,7 @@ class ApplicantsControllerTest < ActionController::TestCase
 
   test "should create applicant" do
     assert_difference('Applicant.count') do
-      post :create, applicant: { address: @applicant.address, city: @applicant.city, comments: @applicant.comments, company: @applicant.company, dob: @applicant.dob, email: @applicant.email, first_name: @applicant.first_name, last_name: @applicant.last_name, line2: @applicant.line2, phone1: @applicant.phone1, phone2: @applicant.phone2, social: @applicant.social, state: @applicant.state, type: @applicant.type, zip: @applicant.zip }
+      post :create, applicant: { address: @applicant.address, city: @applicant.city, comments: @applicant.comments, company: @applicant.company, dob: @applicant.dob, email: @applicant.email, first_name: @applicant.first_name, last_name: @applicant.last_name, line2: @applicant.line2, phone1: @applicant.phone1, phone2: @applicant.phone2, social: @applicant.social, state: @applicant.state, typeOfApplication: @applicant.typeOfApplication, zip: @applicant.zip }
     end
 
     assert_redirected_to applicant_path(assigns(:applicant))
@@ -35,7 +35,7 @@ class ApplicantsControllerTest < ActionController::TestCase
   end
 
   test "should update applicant" do
-    patch :update, id: @applicant, applicant: { address: @applicant.address, city: @applicant.city, comments: @applicant.comments, company: @applicant.company, dob: @applicant.dob, email: @applicant.email, first_name: @applicant.first_name, last_name: @applicant.last_name, line2: @applicant.line2, phone1: @applicant.phone1, phone2: @applicant.phone2, social: @applicant.social, state: @applicant.state, type: @applicant.type, zip: @applicant.zip }
+    patch :update, id: @applicant, applicant: { address: @applicant.address, city: @applicant.city, comments: @applicant.comments, company: @applicant.company, dob: @applicant.dob, email: @applicant.email, first_name: @applicant.first_name, last_name: @applicant.last_name, line2: @applicant.line2, phone1: @applicant.phone1, phone2: @applicant.phone2, social: @applicant.social, state: @applicant.state, typeOfApplication: @applicant.typeOfApplication, zip: @applicant.zip }
     assert_redirected_to applicant_path(assigns(:applicant))
   end
 

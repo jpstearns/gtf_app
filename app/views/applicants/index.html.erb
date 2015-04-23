@@ -8,9 +8,18 @@
       <th>First name</th>
       <th>Last name</th>
       <th>Social</th>
-      <th></th>
-      <th></th>
-      <th></th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Line2</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Phone1</th>
+      <th>Phone2</th>
+      <th>Company</th>
+      <th>Comments</th>
+      <th>Dob</th>
+      <th>Typeofapplication</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -21,6 +30,18 @@
         <td><%= applicant.first_name %></td>
         <td><%= applicant.last_name %></td>
         <td><%= applicant.social %></td>
+        <td><%= applicant.email %></td>
+        <td><%= applicant.address %></td>
+        <td><%= applicant.line2 %></td>
+        <td><%= applicant.city %></td>
+        <td><%= applicant.state %></td>
+        <td><%= applicant.zip %></td>
+        <td><%= applicant.phone1 %></td>
+        <td><%= applicant.phone2 %></td>
+        <td><%= applicant.company %></td>
+        <td><%= applicant.comments %></td>
+        <td><%= applicant.dob %></td>
+        <td><%= applicant.typeOfApplication %></td>
         <td><%= link_to 'Show', applicant %></td>
         <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
         <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>

@@ -15,7 +15,7 @@ class CreateApplicants < ActiveRecord::Migration
       t.string :company
       t.text :comments
       t.string :dob
-      t.string :type
+      t.boolean :typeOfApplication
 
       t.timestamps null: false
     end

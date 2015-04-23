@@ -15,7 +15,7 @@ one:
   company: MyString
   comments: MyText
   dob: MyString
-  type: 
+  typeOfApplication: false
 
 two:
   first_name: MyString
@@ -32,4 +32,4 @@ two:
   company: MyString
   comments: MyText
   dob: MyString
-  type: 
+  typeOfApplication: false

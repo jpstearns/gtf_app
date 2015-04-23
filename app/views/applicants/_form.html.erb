@@ -1,3 +1,4 @@
+
 <%= simple_form_for(@applicant) do |f| %>
   <%= f.error_notification %>
       <section class="wrapper style1">
@@ -19,8 +20,6 @@
 
                   <section>
                     <h3>Contact Information</h3>
-                      <%= radio_button_tag :type, "Business", @type %>Business 
-                      <%= radio_button_tag :type, "Individual", @type %>Individual<br> 
                       <%= f.input :email, placeholder: "user@domain.com" %>
                       <%= f.input :phone1, label:"Primary Phone: " %>
                       <%= f.input :phone2, label: "Secondary Phone: "%> 
@@ -41,8 +40,8 @@
                     </header>
                       <%= f.input :first_name %>
                       <%= f.input :last_name %>
-                      <%= f.input :social %>
-                      <%= f.input :dob %>
+                      <%= f.input :social, placeholder: "###-##-####" %>
+                      <%= f.input :dob, placeholder: "mm/dd/yyyy"%>
                       <%= f.input :company, label: "Affiliated Company" %>
                       <%= f.input :comments %>
                   </article>
@@ -63,6 +62,8 @@
                         <%= f.input :state %>
                         <%= f.input :zip %><br>
 
+                    Application Type
+                      <%= f.collection_radio_buttons :typeOfApplication, [[true, 'Business'] ,[false, 'Individual']], :first, :last %>
                     <div class="form-actions">
                       <%= f.button :submit, label:"Submit"%>
                     </div>
