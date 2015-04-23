@@ -5,27 +5,9 @@ Rails.application.routes.draw do
 
   resources :applicants
 
-  get 'jason/jasons_hang_out'
-
-  get 'clients/edit'
-
-  get 'clients/index'
-
-  get 'clients/new'
-
-  get 'clients/show'
+  resources :cases
 
   get 'about_us/about'
-
-  get 'investigations/edit'
-
-  get 'investigations/index'
-
-  get 'investigations/new'
-
-  get 'investigations/show'
-
-  post 'investigations/new'
 
   devise_for :users
   devise_for :installs
