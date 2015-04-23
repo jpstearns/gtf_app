@@ -1,2 +1,44 @@
-<h1>Clients#show</h1>
-<p>Find me in app/views/clients/show.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Clientname:</strong>
+  <%= @client.clientName %>
+</p>
+
+<p>
+  <strong>Clientphone:</strong>
+  <%= @client.clientPhone %>
+</p>
+
+<p>
+  <strong>Clientemail:</strong>
+  <%= @client.clientEmail %>
+</p>
+
+<p>
+  <strong>Address1:</strong>
+  <%= @client.address1 %>
+</p>
+
+<p>
+  <strong>Address2:</strong>
+  <%= @client.address2 %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @client.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @client.state %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @client.zip %>
+</p>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

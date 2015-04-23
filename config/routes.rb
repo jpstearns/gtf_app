@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :clients
+
   resources :applicants
 
   get 'jason/jasons_hang_out'

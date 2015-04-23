@@ -1,2 +1,39 @@
-<h1>Clients#index</h1>
-<p>Find me in app/views/clients/index.html.erb</p>
+<h1>Listing Clients</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Clientname</th>
+      <th>Clientphone</th>
+      <th>Clientemail</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @clients.each do |client| %>
+      <tr>
+        <td><%= client.clientName %></td>
+        <td><%= client.clientPhone %></td>
+        <td><%= client.clientEmail %></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td><%= link_to 'Show', client %></td>
+        <td><%= link_to 'Edit', edit_client_path(client) %></td>
+        <td><%= link_to 'Destroy', client, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Client', new_client_path %>

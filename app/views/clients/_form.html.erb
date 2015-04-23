@@ -1,0 +1,54 @@
+<%= simple_form_for(@client) do |f| %>
+  <%= f.error_notification %>
+    <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row 200%">
+            <div class="8u 12u(narrower)">
+              <div id="content">
+
+                <!-- Content -->
+
+                  <article>
+                    <header>
+                      <h2>New Client Application</h2>
+                      <p>Welcome, lets begin the application</p>
+                    </header>
+                          <%= f.input :clientName, label: "Client Name: "%><br>
+                          <%= f.input :address1, label:"Client Address: "%>
+                          <%= f.input :address2, label:"Line 2: " %>
+                          <%= f.input :city, label:"City: "%>
+                          <%= f.input :state, label: "State: " %>
+                          <%= f.input :zip, label:"Zip: "%>
+                  </article>
+
+              </div>
+            </div>
+            <div class="4u 12u(narrower)">
+              <div id="sidebar">
+
+                <!-- Sidebar -->
+
+                  <section>
+                    <h3>The Rhode Island Gaming Application</h3>
+                    <p>Welcome to the online integrated application designed to process the licensing applications of employees seeking work at Rhode Island Casinos.</p>
+                    <footer>
+                      <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+                    </footer>
+                  </section>
+
+                  <section>
+                    <h3>Contact Information</h3>
+                          <%= f.input :clientPhone, label:"Phone: " %>
+                          <%= f.input :clientEmail, label:"Email: " %>
+                      <div class="form-actions">
+                        <%= f.button :submit %>
+                      </div>
+                  </section>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <%end%>

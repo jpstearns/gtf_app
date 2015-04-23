@@ -1,23 +1,74 @@
 class ClientsController < ApplicationController
+  before_action :set_client, only: [:show, :edit, :update, :destroy]
+
+  # GET /clients
+  # GET /clients.json
+  def index
+    @clients = Client.all
+  end
+
+  # GET /clients/1
+  # GET /clients/1.json
+  def show
+  end
+
+  # GET /clients/new
+  def new
+    @client = Client.new
+  end
+
+  # GET /clients/1/edit
   def edit
   end
 
-  def index
-  	@submited = params["commit"]
-  	@clientName = params["clientName"]
-  	@clientPhone= params["clientPhone"]
-  	@clientEmail = params["clientEmail"]
-  	@address1 = params["address"]
-  	@address2 = params["address2"]
-  	@city = params["city"]
-  	@state = params["state"]
-  	@zip = params["zip"]
+  # POST /clients
+  # POST /clients.json
+  def create
+    @client = Client.new(client_params)
+
+    respond_to do |format|
+      if @client.save
+        format.html { redirect_to @client, notice: 'Client was successfully created.' }
+        format.json { render :show, status: :created, location: @client }
+      else
+        format.html { render :new }
+        format.json { render json: @client.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
-  def new
+  # PATCH/PUT /clients/1
+  # PATCH/PUT /clients/1.json
+  def update
+    respond_to do |format|
+      if @client.update(client_params)
+        format.html { redirect_to @client, notice: 'Client was successfully updated.' }
+        format.json { render :show, status: :ok, location: @client }
+      else
+        format.html { render :edit }
+        format.json { render json: @client.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
-  def show
+  # DELETE /clients/1
+  # DELETE /clients/1.json
+  def destroy
+    @client.destroy
+    respond_to do |format|
+      format.html { redirect_to clients_url, notice: 'Client was successfully destroyed.' }
+      format.json { head :no_content }
+    end
   end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_client
+      @client = Client.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def client_params
+      params.require(:client).permit(:clientName, :clientPhone, :clientEmail, :address1, :address2, :city, :state, :zip)
+    end
 end
-    
