@@ -44,20 +44,20 @@
               <li class = "current"> <%= link_to "Home", root_path %></li>
                <li> <a href="">Case Management</a>
                 <ul>
-                  <li><a href="#">Lorem dolor</a></li>
-                  <li><a href="#">Magna phasellus</a></li>
-                  <li><a href="#">Etiam sed tempus</a></li>
+                  <li><%= link_to "New Case", new_case_path%></li>
+                  <li><a href="#">Open Cases</a></li>
+                  <li><a href="#">All Cases</a></li>
                   <li>
-                    <a href="">Submenu</a>
+                    <a href="">Assignments Menu</a>
                     <ul>
-                      <li><a href="#">Lorem dolor</a></li>
-                      <li><a href="#">Phasellus magna</a></li>
-                      <li><a href="#">Magna phasellus</a></li>
-                      <li><a href="#">Etiam nisl</a></li>
-                      <li><a href="#">Veroeros feugiat</a></li>
+                      <li><a href="#">Create Assignment</a></li>
+                      <li><a href="#">Current Assignments</a></li>
+                      <li><a href="#">All Applicants</a></li>
+                      <li><a href="#">All Clients</a></li>
+                      <li><a href="#">All Detectives</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">Veroeros feugiat</a></li>
+                  <li><a href="#">Calendar</a></li>
                 </ul>
               </li>
               <li><%= link_to "Client", clients_new_path %></li>

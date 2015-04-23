@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150425181508) do
+ActiveRecord::Schema.define(version: 20150425181509) do
 
   create_table "applicants", force: :cascade do |t|
     t.string   "first_name"
@@ -34,15 +34,14 @@ ActiveRecord::Schema.define(version: 20150425181508) do
   end
 
   create_table "cases", force: :cascade do |t|
-    t.string   "badge_num"
-    t.string   "social"
-    t.string   "client_id"
+    t.string   "typeOfCase"
+    t.integer  "user_id"
+    t.integer  "applicant_id"
+    t.integer  "client_id"
     t.string   "status"
-    t.string   "licensetype"
-    t.string   "positionOfApplication"
-    t.string   "renewal"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.string   "licenseType"
+    t.string   "position"
+    t.datetime "renewal"
   end
 
   create_table "clients", force: :cascade do |t|
