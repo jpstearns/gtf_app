@@ -87,8 +87,11 @@
                     <%= f.input :closed_date, as: :date %>
 
                     <%= f.input :location, collection: Case::Location.all %>
-                    <%= f.input :status, collection: Case::Status.all %>
+                    <%= f.input :status, collection: Case::Status.all %><br></br>
                   </section>
+                    <div class="form-actions">
+                      <%= f.button :submit, label:"Submit"%>
+                    </div>
               </div>
             </div>
           </div>
