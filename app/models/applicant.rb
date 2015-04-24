@@ -1,2 +1,5 @@
 class Applicant < ActiveRecord::Base
+	validates_presence_of :first_name, :last_name, :social, :dob
+	validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
+	validates :social, format: {with: /^(\d{3}-?\d{2}-?\d{4}|XXX-XX-XXXX)$/i, :multiline => true, on: :create}
 end
