@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150425181513) do
+ActiveRecord::Schema.define(version: 20150425181516) do
 
   create_table "applicants", force: :cascade do |t|
     t.string   "first_name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20150425181513) do
     t.string   "line2"
     t.string   "city"
     t.string   "state"
-    t.integer  "zip"
+    t.string   "zip"
     t.string   "phone1"
     t.string   "phone2"
     t.string   "company"

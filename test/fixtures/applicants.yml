@@ -9,7 +9,7 @@ one:
   line2: MyString
   city: MyString
   state: MyString
-  zip: 1
+  zip: MyString
   phone1: MyString
   phone2: MyString
   company: MyString
@@ -26,7 +26,7 @@ two:
   line2: MyString
   city: MyString
   state: MyString
-  zip: 1
+  zip: MyString
   phone1: MyString
   phone2: MyString
   company: MyString
