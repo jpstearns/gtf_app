@@ -61,9 +61,12 @@
                         <%= f.input :city %>
                         <%= f.input :state %>
                         <%= f.input :zip %><br>
-
-                    Application Type
-                      <%= f.collection_radio_buttons :typeOfApplication, [[true, 'Business'] ,[false, 'Individual']], :first, :last %>
+                        <h3> Application Type </h3>
+                    <div id="radio">
+                      <div class="controls-row">
+                           <%= f.collection_radio_buttons :typeOfApplication, [[true, 'Business'] ,[false, 'Individual']], :first, :last %>
+                      </div>
+                    </div>
                     <div class="form-actions">
                       <%= f.button :submit, label:"Submit"%>
                     </div>

@@ -216,6 +216,10 @@
 		margin-bottom: 0.5em;
 	}
 
+	#radio label{
+		float:left;
+	}
+
 	::-webkit-input-placeholder {
 		color: #999999;
 		position: relative;
