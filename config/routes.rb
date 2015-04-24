@@ -5,8 +5,6 @@ Rails.application.routes.draw do
 
   resources :applicants
 
-  resources :cases
-
   get 'jason/jasons_hang_out'
 
   get 'clients/edit'
