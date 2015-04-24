@@ -1,3 +1,43 @@
+<!-- Nav -->
+<nav id="nav">
+  <p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+    <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+<ul>
+  <li><%= link_to "Home", root_path %></li>
+  <li>
+      <a href="">Case Management</a>
+    <ul>
+      <li><%= link_to "New Case", new_case_path%></li>
+      <li><a href="#">Open Cases</a></li>
+      <li><a href="#">All Cases</a></li>
+      <li>
+        <a href="">Assignments Menu</a>
+        <ul>
+          <li><a href="#">Create Assignment</a></li>
+          <li><a href="#">Current Assignments</a></li>
+          <li><%= link_to "All Applicants", applicants_path %></li>
+          <li><%= link_to "All Clients", clients_index_path%></li>
+          <li><a href="#">All Detectives</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Calendar</a></li>
+    </ul>
+  </li>
+  <li><%= link_to "Client", clients_new_path %></li>
+  <li class= "current"><%= link_to "Applicant", new_applicant_path%></li>
+  <li><%= link_to "About Us", about_us_about_path %></li>
+  <li><a href="#footer">Contact</a></li>       
+</ul>
+</nav>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>

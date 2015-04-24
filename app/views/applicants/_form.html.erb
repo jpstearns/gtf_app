@@ -41,7 +41,7 @@
                       <%= f.input :first_name %>
                       <%= f.input :last_name %>
                       <%= f.input :social, placeholder: "###-##-####" %>
-                      <%= f.input :dob, placeholder: "mm/dd/yyyy"%>
+                      <%= f.date_select :dob, placeholder: "mm/dd/yyyy"%>
                       <%= f.input :company, label: "Affiliated Company" %>
                       <%= f.input :comments %>
                   </article>
@@ -61,7 +61,7 @@
                         <%= f.input :city %>
                         <%= f.input :state %>
                         <%= f.input :zip %><br>
-                        <h3> Application Type </h3>
+                        <h3> Application Type </h3> 
                     <div id="radio">
                       <div class="controls-row">
                            <%= f.collection_radio_buttons :typeOfApplication, [[true, 'Business'] ,[false, 'Individual']], :first, :last %>

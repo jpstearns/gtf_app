@@ -1,53 +1,90 @@
+<!-- Nav -->
+<nav id="nav">
+  <p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+    <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+<ul>
+  <li class="current"> <%= link_to "Home", root_path %></li>
+  <li>
+      <a href="">Case Management</a>
+    <ul>
+      <li><%= link_to "New Case", new_case_path%></li>
+      <li><a href="#">Open Cases</a></li>
+      <li><a href="#">All Cases</a></li>
+      <li>
+        <a href="">Assignments Menu</a>
+        <ul>
+          <li><a href="#">Create Assignment</a></li>
+          <li><a href="#">Current Assignments</a></li>
+          <li><%= link_to "All Applicants", applicants_path %></li>
+          <li><%= link_to "All Clients", clients_index_path%></li>
+          <li><a href="#">All Detectives</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Calendar</a></li>
+    </ul>
+  </li>
+  <li><%= link_to "Client", clients_new_path %></li>
+  <li><%= link_to "Applicant", new_applicant_path%></li>
+  <li><%= link_to "About Us", about_us_about_path %></li>
+  <li><a href="#footer">Contact</a></li>       
+</ul>
+</nav>
+</div>
+<!-- Main -->
+<section class="wrapper style1">
+	<div class="container">
+		<div class="row 200%">
+			<div class="4u 12u(narrower)">
+				<div id="sidebar">
 
-					<!-- Main -->
-			<section class="wrapper style1">
-				<div class="container">
-					<div class="row 200%">
-						<div class="4u 12u(narrower)">
-							<div id="sidebar">
+					<!-- Sidebar -->
 
-								<!-- Sidebar -->
+						<section>
+							<h3>Welcome to Integrated Licensing Application</h3>
+							<p>You will need to login to continue to access the rest of the site's content. If you are a new user follow the link below to sign up and begin using your account today.</p>
+						<footer>
+	                      	<span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+	                    </footer>
+						</section>
 
-									<section>
-										<h3>Welcome to Integrated Licensing Application</h3>
-										<p>You will need to login to continue to access the rest of the site's content. If you are a new user follow the link below to sign up and begin using your account today.</p>
-									<footer>
-				                      	<span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
-				                    </footer>
-									</section>
-
-							</div>
-						</div>
-						<div class="8u  12u(narrower) important(narrower)">
-							<div id="content">
-
-								<!-- Content -->
-
-									<article>
-										<header>
-											<h2>Login</h2>
-											<p>Enter E-mail & Password</p>
-										</header>
-										<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-										  <div class="form-inputs">
-										    <%= f.input :email, required: false, autofocus: true %>
-										    <%= f.input :password, required: false %>
-										  </div>
-										  <br></br>
-
-										  <div class="form-actions">
-										    <%= f.button :submit, "Log in" %>
-										  </div>
-										<% end %>
-
-									<%= render "devise/shared/links" %>
-									</article>
-
-							</div>
-						</div>
-					</div>
 				</div>
-			</section>
-       <article>
+			</div>
+			<div class="8u  12u(narrower) important(narrower)">
+				<div id="content">
 
-    
+					<!-- Content -->
+
+						<article>
+							<header>
+								<h2>Login</h2>
+								<p>Enter E-mail & Password</p>
+							</header>
+							<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+							  <div class="form-inputs">
+							    <%= f.input :email, required: false, autofocus: true %>
+							    <%= f.input :password, required: false %>
+							  </div>
+							  <br></br>
+
+							  <div class="form-actions">
+							    <%= f.button :submit, "Log in" %>
+							  </div>
+							<% end %>
+
+						<%= render "devise/shared/links" %>
+						</article>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<article>
+

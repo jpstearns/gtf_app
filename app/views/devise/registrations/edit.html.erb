@@ -1,29 +1,106 @@
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
-
+<!-- Nav -->
+<nav id="nav">
+  <p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+    <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+<ul>
+  <li class="current"> <%= link_to "Home", root_path %></li>
+  <li>
+      <a href="">Case Management</a>
+    <ul>
+      <li><%= link_to "New Case", new_case_path%></li>
+      <li><a href="#">Open Cases</a></li>
+      <li><a href="#">All Cases</a></li>
+      <li>
+        <a href="">Assignments Menu</a>
+        <ul>
+          <li><a href="#">Create Assignment</a></li>
+          <li><a href="#">Current Assignments</a></li>
+          <li><%= link_to "All Applicants", applicants_path %></li>
+          <li><%= link_to "All Clients", clients_index_path%></li>
+          <li><a href="#">All Detectives</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Calendar</a></li>
+    </ul>
+  </li>
+  <li><%= link_to "Client", clients_new_path %></li>
+  <li><%= link_to "Applicant", new_applicant_path%></li>
+  <li><%= link_to "About Us", about_us_about_path %></li>
+  <li><a href="#footer">Contact</a></li>       
+</ul>
+</nav>
+</div>
 <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
+      <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row 200%">
+            <div class="4u 12u(narrower)">
+              <div id="sidebar">
 
-  <div class="form-inputs">
-    <%= f.input :first_name, required: true, autofocus: true%>
-    <%= f.input :last_name, required: true, autofocus: true%>
-    <%= f.input :email, required: true, autofocus: true %>
+                <!-- Sidebar -->
 
-    <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-      <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
-    <% end %>
+                  <section>
+                    <h3>Rhode Island Gaming App</h3>
+                    <p>This page will guide you through the process of updating your information, changing your password, and deleting user accounts. Warning: Deleting user accounts is permanent and all of your personal data will be destroyed for security measures.</p>
+                    <footer>
+                       <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+                    </footer>
+                  </section>
 
-    <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
-    <%= f.input :password_confirmation, required: false %>
-    <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
-  </div>
+                  <section>
+                    <h3>Change Password</h3>
+                        <%= f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false %>
+                        <%= f.input :password_confirmation, required: false %>
+                        <%= f.input :current_password, hint: "we need your current password to confirm your changes", required: true %>
+                      <br></br>
+                    <p>Unhappy? <%= link_to "Click Here", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+                  </section>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Update" %>
-  </div>
-<% end %>
+              </div>
+            </div>
+            <div class="8u  12u(narrower) important(narrower)">
+              <div id="content">
 
-<h3>Cancel my account</h3>
+                <!-- Content -->
 
-<p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+                  <article>
+                    <header>
+                      <h2>Edit User Profile</h2>
+                      <p>Welcome Officer lets get your account setup.</p>
+                    </header>
+                      <div class="form-inputs">
+                        <%= f.input :first_name, required: true, autofocus: true%>
+                        <%= f.input :last_name, required: true, autofocus: true%>
+                        <%= f.input :email, required: true, autofocus: true %>
+                        <%= f.input :badge_number, required: true, autofocus: true %>
+                        <%= f.input :phone_number, required: true, autofocus: true %>
+                        <%= f.input :desk_extenstion, required: true, autofocus: true %>
+                        <%= f.input :rank, required: true, autofocus: true %><br>
+                        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                          <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+                        <% end %>
 
-<%= link_to "Back", :back %>
+                      </div>
+                     <div class="form-actions">
+                        <%= f.button :submit, "Update" %>
+                      </div>
+                  </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  <% end %>
+
+
+

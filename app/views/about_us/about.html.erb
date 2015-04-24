@@ -1,42 +1,81 @@
+<!-- Nav -->
+<nav id="nav">
+  <p class="navbar-text pull-right">
+  <% if user_signed_in? %>
+    <strong><%= current_user.email %></strong>.
+    <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
+      <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+  <% else %>
+    <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
+    <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
+  <% end %>
+<ul>
+  <li> <%= link_to "Home", root_path %></li>
+  <li>
+      <a href="">Case Management</a>
+    <ul>
+      <li><%= link_to "New Case", new_case_path%></li>
+      <li><a href="#">Open Cases</a></li>
+      <li><a href="#">All Cases</a></li>
+      <li>
+        <a href="">Assignments Menu</a>
+        <ul>
+          <li><a href="#">Create Assignment</a></li>
+          <li><a href="#">Current Assignments</a></li>
+          <li><%= link_to "All Applicants", applicants_path %></li>
+          <li><%= link_to "All Clients", clients_index_path%></li>
+          <li><a href="#">All Detectives</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Calendar</a></li>
+    </ul>
+  </li>
+  <li><%= link_to "Client", clients_new_path %></li>
+  <li><%= link_to "Applicant", new_applicant_path%></li>
+  <li class="current"><%= link_to "About Us", about_us_about_path %></li>
+  <li><a href="#footer">Contact</a></li>       
+</ul>
+</nav>
+</div>
 <!-- Main -->
-			<section class="wrapper style1">
-				<div class="container">
-					<div id="content">
+<section class="wrapper style1">
+	<div class="container">
+		<div id="content">
 
-						<!-- Content -->
+			<!-- Content -->
 
-							<article>
-								<header>
-									<h2>The Rhode Island State Police</h2>
-									<h3>Gaming Enforcement Unit</h3>
-									<p>About Us</p>
-								</header>
+				<article>
+					<header>
+						<h2>The Rhode Island State Police</h2>
+						<h3>Gaming Enforcement Unit</h3>
+						<p>About Us</p>
+					</header>
 
-								<span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+					<span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
 
-								<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
-								Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
-								Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
-								consequat etiam lorem ipsum dolor sit amet nullam.</p>
+					<p>Phasellus quam turpis, feugiat sit amet ornare in, hendrerit in lectus.
+					Praesent semper mod quis eget mi. Etiam eu ante risus. Aliquam erat volutpat.
+					Aliquam luctus et mattis lectus sit amet pulvinar. Nam turpis nisi
+					consequat etiam lorem ipsum dolor sit amet nullam.</p>
 
-								<h3>Our Role at Twin River</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
-								justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
-								ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
-								vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
-								Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
-								rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
-								Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
-								Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
+					<h3>Our Role at Twin River</h3>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac quam risus, at tempus
+					justo. Sed dictum rutrum massa eu volutpat. Quisque vitae hendrerit sem. Pellentesque lorem felis,
+					ultricies a bibendum id, bibendum sit amet nisl. Mauris et lorem quam. Maecenas rutrum imperdiet
+					vulputate. Nulla quis nibh ipsum, sed egestas justo. Morbi ut ante mattis orci convallis tempor.
+					Etiam a lacus a lacus pharetra porttitor quis accumsan odio. Sed vel euismod nisi. Etiam convallis
+					rhoncus dui quis euismod. Maecenas lorem tellus, congue et condimentum ac, ullamcorper non sapien.
+					Donec sagittis massa et leo semper a scelerisque metus faucibus. Morbi congue mattis mi.
+					Phasellus sed nisl vitae risus tristique volutpat. Cras rutrum commodo luctus.</p>
 
-								<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
-								quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
-								Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
-								fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
-								Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
-								Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
-							</article>
+					<p>Phasellus odio risus, faucibus et viverra vitae, eleifend ac purus. Praesent mattis, enim
+					quis hendrerit porttitor, sapien tortor viverra magna, sit amet rhoncus nisl lacus nec arcu.
+					Suspendisse laoreet metus ut metus imperdiet interdum aliquam justo tincidunt. Mauris dolor urna,
+					fringilla vel malesuada ac, dignissim eu mi. Praesent mollis massa ac nulla pretium pretium.
+					Maecenas tortor mauris, consectetur pellentesque dapibus eget, tincidunt vitae arcu.
+					Vestibulum purus augue, tincidunt sit amet iaculis id, porta eu purus.</p>
+				</article>
 
-					</div>
-				</div>
-			</section>
+		</div>
+	</div>
+</section>
