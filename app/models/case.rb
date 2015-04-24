@@ -29,13 +29,13 @@ class Case < ActiveRecord::Base
 		end
 
 		def name
-			I18n.t(@key, scope: :"models.case.positions")
+			@key 
 		end
 	end
 
 	class LicenseType
 		KEYS = [
-			OPERATION_LICENSE = "Cage Cashier",
+			OPERATION_LICENSE = "Gaming License",
 			VENDOR_LICENSE = "Vendor License",
 			]	
 
@@ -56,7 +56,7 @@ class Case < ActiveRecord::Base
 		end
 
 		def name
-			I18n.t(@key, scope: :"models.case.licensetypes")
+			@key 
 		end
 	end
 	
@@ -83,7 +83,7 @@ class Case < ActiveRecord::Base
 		end
 
 		def name
-			I18n.t(@key, scope: :"models.case.locations")
+			@key 
 		end
 	end
 
@@ -114,7 +114,7 @@ class Case < ActiveRecord::Base
 		end
 
 		def name
-			I18n.t(@key, scope: :"models.case.statuses")
+			@key 
 		end
 	end
 end

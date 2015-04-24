@@ -21,3 +21,9 @@
 
 en:
   hello: "Hello world"
+
+en:
+  models:
+    case:
+      positions:
+        dealer: ""	
