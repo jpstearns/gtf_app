@@ -1,45 +1,74 @@
 class InvestigationsController < ApplicationController
-  
+  before_action :set_investigation, only: [:show, :edit, :update, :destroy]
 
+  # GET /investigations
+  # GET /investigations.json
   def index
     @investigations = Investigation.all
-  end 
- 
+  end
+
+  # GET /investigations/1
+  # GET /investigations/1.json
   def show
   end
 
+  # GET /investigations/new
   def new
-    @submited = params["commit"]
-    @firstname = params["firstname"]
-    @lastname = params["lastname"]
-    if @lastname == "" || @firstname == ""
-      flash.now['error'] = "Must enter your name"
-    end
-    @social=params["social"]
-    @email = params["email"]
-    @address = params["address"]
-    @line2 = params["line2"]
-    @city = params["city"]
-    @state = params["state"]
-    @zip = params["zip"]
-    @phone1 = params["phone1"]
-    @phone2 = params["phone2"]
-    @company = params["company"]
-    @comments = params["comments"]
-    
-
+    @investigation = Investigation.new
   end
 
-  def create
-    @investigation = Investigations.new(investigation_params)
-  end
-
+  # GET /investigations/1/edit
   def edit
   end
 
-  def update
+  # POST /investigations
+  # POST /investigations.json
+  def create
+    @investigation = Investigation.new(investigation_params)
+
+    respond_to do |format|
+      if @investigation.save
+        format.html { redirect_to @investigation, notice: 'Investigation was successfully created.' }
+        format.json { render :show, status: :created, location: @investigation }
+      else
+        format.html { render :new }
+        format.json { render json: @investigation.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
-  def destroy
+  # PATCH/PUT /investigations/1
+  # PATCH/PUT /investigations/1.json
+  def update
+    respond_to do |format|
+      if @investigation.update(investigation_params)
+        format.html { redirect_to @investigation, notice: 'Investigation was successfully updated.' }
+        format.json { render :show, status: :ok, location: @investigation }
+      else
+        format.html { render :edit }
+        format.json { render json: @investigation.errors, status: :unprocessable_entity }
+      end
+    end
   end
+
+  # DELETE /investigations/1
+  # DELETE /investigations/1.json
+  def destroy
+    @investigation.destroy
+    respond_to do |format|
+      format.html { redirect_to investigations_url, notice: 'Investigation was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_investigation
+      @investigation = Investigation.find(params[:id])
+    end
+
+    # Never trust parameters from the scary internet, only allow the white list through.
+    def investigation_params
+      params.require(:investigation).permit(:typeOfCase, :user_id, :applicant_id, :client_id, :status, :licenseType, :position, :renewal, :applicant_name, :applicant_dob, :applicant_social, :caseNumber, :gaming_license_number, :location, :assigned_date, :closed_date, :user_badge_number)
+    end
 end

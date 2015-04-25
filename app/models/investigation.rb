@@ -1,4 +1,4 @@
-class Case < ActiveRecord::Base
+class Investigation < ActiveRecord::Base
 	class Position
 	    KEYS = [
 	        CAGE_CASHIER = "Cage Cashier",

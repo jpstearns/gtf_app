@@ -11,12 +11,12 @@
   <% end %>
 <ul>
   <li><%= link_to "Home", root_path %></li>
-  <li>
+  <li class = "current">
       <a href="">Case Management</a>
     <ul>
       <li><%= link_to "New Case", new_investigation_path%></li>
       <li><a href="#">Open Cases</a></li>
-      <li><%= link_to "All Cases", investigations_path %></li>
+      <li><%= link_to "All Cases", investigations_path%></li>
       <li>
         <a href="">Assignments Menu</a>
         <ul>
@@ -31,7 +31,7 @@
     </ul>
   </li>
   <li><%= link_to "Client", clients_new_path %></li>
-  <li class = "current"><%= link_to "Applicant", new_applicant_path%></li>
+  <li><%= link_to "Applicant", new_applicant_path%></li>
   <li><%= link_to "About Us", about_us_about_path %></li>
   <li><a href="#footer">Contact</a></li>       
 </ul>
@@ -40,79 +40,89 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>First name:</strong>
-  <%= @applicant.first_name %>
+  <strong>Typeofcase:</strong>
+  <%= @investigation.typeOfCase %>
 </p>
 
 <p>
-  <strong>Last name:</strong>
-  <%= @applicant.last_name %>
+  <strong>User:</strong>
+  <%= @investigation.user_id %>
 </p>
 
 <p>
-  <strong>Social:</strong>
-  <%= @applicant.social %>
+  <strong>Applicant:</strong>
+  <%= @investigation.applicant_id %>
 </p>
 
 <p>
-  <strong>Email:</strong>
-  <%= @applicant.email %>
+  <strong>Client:</strong>
+  <%= @investigation.client_id %>
 </p>
 
 <p>
-  <strong>Address:</strong>
-  <%= @applicant.address %>
+  <strong>Status:</strong>
+  <%= @investigation.status %>
 </p>
 
 <p>
-  <strong>Line2:</strong>
-  <%= @applicant.line2 %>
+  <strong>Licensetype:</strong>
+  <%= @investigation.licenseType %>
 </p>
 
 <p>
-  <strong>City:</strong>
-  <%= @applicant.city %>
+  <strong>Position:</strong>
+  <%= @investigation.position %>
 </p>
 
 <p>
-  <strong>State:</strong>
-  <%= @applicant.state %>
+  <strong>Renewal:</strong>
+  <%= @investigation.renewal %>
 </p>
 
 <p>
-  <strong>Zip:</strong>
-  <%= @applicant.zip %>
+  <strong>Applicant name:</strong>
+  <%= @investigation.applicant_name %>
 </p>
 
 <p>
-  <strong>Phone1:</strong>
-  <%= @applicant.phone1 %>
+  <strong>Applicant dob:</strong>
+  <%= @investigation.applicant_dob %>
 </p>
 
 <p>
-  <strong>Phone2:</strong>
-  <%= @applicant.phone2 %>
+  <strong>Applicant social:</strong>
+  <%= @investigation.applicant_social %>
 </p>
 
 <p>
-  <strong>Company:</strong>
-  <%= @applicant.company %>
+  <strong>Casenumber:</strong>
+  <%= @investigation.caseNumber %>
 </p>
 
 <p>
-  <strong>Comments:</strong>
-  <%= @applicant.comments %>
+  <strong>Gaming license number:</strong>
+  <%= @investigation.gaming_license_number %>
 </p>
 
 <p>
-  <strong>Dob:</strong>
-  <%= @applicant.dob %>
+  <strong>Location:</strong>
+  <%= @investigation.location %>
 </p>
 
 <p>
-  <strong>Typeofapplication:</strong>
-  <%= @applicant.typeOfApplication %>
+  <strong>Assigned date:</strong>
+  <%= @investigation.assigned_date %>
 </p>
 
-<%= link_to 'Edit', edit_applicant_path(@applicant) %> |
-<%= link_to 'Back', applicants_path %>
+<p>
+  <strong>Closed date:</strong>
+  <%= @investigation.closed_date %>
+</p>
+
+<p>
+  <strong>User badge number:</strong>
+  <%= @investigation.user_badge_number %>
+</p>
+
+<%= link_to 'Edit', edit_investigation_path(@investigation) %> |
+<%= link_to 'Back', investigations_path %>

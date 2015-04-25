@@ -1,0 +1,66 @@
+<%= simple_form_for(@investigation) do |f| %>
+  <%= f.error_notification %>
+
+      <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row 200%">
+            <div class="3u 12u(narrower)">
+              <div id="sidebar1">
+
+                <!-- Sidebar 1 -->
+
+                  <section>
+                    <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+                    <h3>Applicant Information</h3>
+                        <%= f.input :licenseType, collection: Case::License.all, label:"License Type"%>
+                        <%= f.input :applicant_name, label:"Applicant Name" %>
+                        <%= f.input :applicant_dob, label: "Date Of Birth" %>
+                        <%= f.input :applicant_social, label: "Social Security Number" %><br>
+                  </section>
+              </div>
+            </div>
+            <div class="6u 12u(narrower) important(narrower)">
+              <div id="content">
+
+                <!-- Content -->
+
+                  <article>
+                    <header>
+                      <h2>New Investigation</h2>
+                      <p>Welcome Detective lets being a new Investigation.</p>
+                    </header>
+                        <%= f.input :user_badge_number %>
+                        <%= f.input :caseNumber %>
+                        <%= f.input :gaming_license_number %>
+                        <%= f.input :position, collection: Case::Position.all %>
+                  </article>
+
+              </div>
+            </div>
+            <div class="3u 12u(narrower)">
+              <div id="sidebar2">
+
+                <!-- Sidebar 2 -->
+
+                  <section>
+                    <h3>Case Information</h3>
+                    <ul class="links">
+                      <%= f.input :location, collection: Case::Location.all %>
+                      <%= f.input :assigned_date %>
+                      <%= f.input :closed_date %>
+                      <%= f.input :status, collection: Case::Status.all %>
+
+                    </ul>
+                    <footer>
+                      <div class="form-actions">
+                        <%= f.button :submit, "Submit" %>
+                      </div>
+                    </footer>
+                  </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+<% end %>

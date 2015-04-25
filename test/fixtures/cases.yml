@@ -15,8 +15,8 @@ one:
   caseNumber: MyString
   gaming_license_number: MyString
   location: MyString
-  assigned_date: 2015-04-24 23:20:46
-  closed_date: 2015-04-24 23:20:46
+  assigned_date: 2015-04-24 23:31:51
+  closed_date: 2015-04-24 23:31:51
   user_badge_number: MyString
 
 two:
@@ -34,6 +34,6 @@ two:
   caseNumber: MyString
   gaming_license_number: MyString
   location: MyString
-  assigned_date: 2015-04-24 23:20:46
-  closed_date: 2015-04-24 23:20:46
+  assigned_date: 2015-04-24 23:31:51
+  closed_date: 2015-04-24 23:31:51
   user_badge_number: MyString

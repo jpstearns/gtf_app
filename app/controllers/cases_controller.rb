@@ -4,7 +4,7 @@ class CasesController < ApplicationController
   # GET /cases
   # GET /cases.json
   def index
-    @cases = Case.all
+    @investigation = Case.all
   end
 
   # GET /cases/1
@@ -14,7 +14,7 @@ class CasesController < ApplicationController
 
   # GET /cases/new
   def new
-    @case = Case.new
+    @investigation = Case.new
   end
 
   # GET /cases/1/edit
@@ -24,15 +24,15 @@ class CasesController < ApplicationController
   # POST /cases
   # POST /cases.json
   def create
-    @case = Case.new(case_params)
+    @investigation = Case.new(case_params)
 
     respond_to do |format|
-      if @case.save
-        format.html { redirect_to @case, notice: 'Case was successfully created.' }
+      if @investigation.save
+        format.html { redirect_to @investigation, notice: 'Case was successfully created.' }
         format.json { render :show, status: :created, location: @case }
       else
         format.html { render :new }
-        format.json { render json: @case.errors, status: :unprocessable_entity }
+        format.json { render json: @investigation.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -41,7 +41,7 @@ class CasesController < ApplicationController
   # PATCH/PUT /cases/1.json
   def update
     respond_to do |format|
-      if @case.update(case_params)
+      if @investigation.update(case_params)
         format.html { redirect_to @case, notice: 'Case was successfully updated.' }
         format.json { render :show, status: :ok, location: @case }
       else
@@ -54,7 +54,7 @@ class CasesController < ApplicationController
   # DELETE /cases/1
   # DELETE /cases/1.json
   def destroy
-    @case.destroy
+    @investigation.destroy
     respond_to do |format|
       format.html { redirect_to cases_url, notice: 'Case was successfully destroyed.' }
       format.json { head :no_content }
@@ -64,7 +64,7 @@ class CasesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_case
-      @case = Case.find(params[:id])
+      @investigation = Case.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

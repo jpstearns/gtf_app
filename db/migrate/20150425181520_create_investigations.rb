@@ -1,6 +1,6 @@
-class CreateCases < ActiveRecord::Migration
+class CreateInvestigations < ActiveRecord::Migration
   def change
-    create_table :cases do |t|
+    create_table :investigations do |t|
       t.string :typeOfCase
       t.integer :user_id
       t.integer :applicant_id
@@ -15,8 +15,8 @@ class CreateCases < ActiveRecord::Migration
       t.string :caseNumber
       t.string :gaming_license_number
       t.string :location
-      t.datetime :assigned_date
-      t.datetime :closed_date
+      t.date :assigned_date
+      t.date :closed_date
       t.string :user_badge_number
 
       t.timestamps null: false
