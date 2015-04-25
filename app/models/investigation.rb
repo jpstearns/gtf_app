@@ -89,8 +89,8 @@ class Investigation < ActiveRecord::Base
 
 	class License
 	    KEYS = [
-	   		OPERATION_LICENSE = "Operation License",
-	   		VENDOR_LICENSE = "Vendor License",
+	        OPERATION = "Operation License",
+	        VENDOR= "Vendor License",
 	        ]   
 
 	    def self.keys 
@@ -110,7 +110,7 @@ class Investigation < ActiveRecord::Base
 	    end
 
 	    def name
-	        @keys
+	        @key
 	    end
 	end
 end

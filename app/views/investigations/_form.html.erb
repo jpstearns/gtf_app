@@ -13,9 +13,9 @@
                   <section>
                     <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
                     <h3>Applicant Information</h3>
-                        <%= f.input :licenseType, collection: Case::License.all, label:"License Type"%>
+                        <%= f.input :licenseType, collection: Case::License.all %>
                         <%= f.input :applicant_name, label:"Applicant Name" %>
-                        <%= f.input :applicant_dob, label: "Date Of Birth" %>
+                        <%= f.input :applicant_dob, as: :datepicker, label: "Date Of Birth" %>
                         <%= f.input :applicant_social, label: "Social Security Number" %><br>
                   </section>
               </div>
@@ -47,8 +47,8 @@
                     <h3>Case Information</h3>
                     <ul class="links">
                       <%= f.input :location, collection: Case::Location.all %>
-                      <%= f.input :assigned_date %>
-                      <%= f.input :closed_date %>
+                      <%= f.input :assigned_date, as: :datepicker %>
+                      <%= f.input :closed_date, as: :datepicker%>
                       <%= f.input :status, collection: Case::Status.all %>
 
                     </ul>
