@@ -33,6 +33,28 @@ ActiveRecord::Schema.define(version: 20150425181521) do
     t.datetime "updated_at",        null: false
   end
 
+  create_table "cases", force: :cascade do |t|
+    t.string   "typeOfCase"
+    t.integer  "user_id"
+    t.integer  "applicant_id"
+    t.integer  "client_id"
+    t.string   "status"
+    t.string   "licenseType"
+    t.string   "position"
+    t.date     "renewal"
+    t.string   "applicant_name"
+    t.string   "applicant_dob"
+    t.string   "applicant_social"
+    t.string   "caseNumber"
+    t.string   "gaming_license_number"
+    t.string   "location"
+    t.datetime "assigned_date"
+    t.datetime "closed_date"
+    t.string   "user_badge_number"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
   create_table "clients", force: :cascade do |t|
     t.string   "clientName"
     t.string   "clientPhone"
