@@ -32,7 +32,7 @@
                       <p>Welcome Officer, lets begin a new Investigation</p>
                     </header>                     
                       <%= f.input :caseNumber, label:"Case Number" %>
-                      <%= f.input :gaming_licens_number, label:"Gaming License Number" %>
+                      <%= f.input :gaming_license_number, label:"Gaming License Number" %>
                       <%= f.input :position, collection: Case::Position.all %>
                       <%= f.input :licenseType, collection: Case::LicenseType.all %>
                   </article>
