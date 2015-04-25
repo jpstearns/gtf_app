@@ -1,0 +1,89 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Typeofcase:</strong>
+  <%= @case.typeOfCase %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @case.user_id %>
+</p>
+
+<p>
+  <strong>Applicant:</strong>
+  <%= @case.applicant_id %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @case.client_id %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @case.status %>
+</p>
+
+<p>
+  <strong>Licensetype:</strong>
+  <%= @case.licenseType %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @case.position %>
+</p>
+
+<p>
+  <strong>Renewal:</strong>
+  <%= @case.renewal %>
+</p>
+
+<p>
+  <strong>Applicant name:</strong>
+  <%= @case.applicant_name %>
+</p>
+
+<p>
+  <strong>Applicant dob:</strong>
+  <%= @case.applicant_dob %>
+</p>
+
+<p>
+  <strong>Applicant social:</strong>
+  <%= @case.applicant_social %>
+</p>
+
+<p>
+  <strong>Casenumber:</strong>
+  <%= @case.caseNumber %>
+</p>
+
+<p>
+  <strong>Gaming license number:</strong>
+  <%= @case.gaming_license_number %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @case.location %>
+</p>
+
+<p>
+  <strong>Assigned date:</strong>
+  <%= @case.assigned_date %>
+</p>
+
+<p>
+  <strong>Closed date:</strong>
+  <%= @case.closed_date %>
+</p>
+
+<p>
+  <strong>User badge number:</strong>
+  <%= @case.user_badge_number %>
+</p>
+
+<%= link_to 'Edit', edit_case_path(@case) %> |
+<%= link_to 'Back', cases_path %>
