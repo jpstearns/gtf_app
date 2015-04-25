@@ -19,7 +19,7 @@
       <li>
         <a href="">Search Records</a>
         <ul>
-          <li><%= link_to "Cases", investigations_path => %> </li>
+          <li><%= link_to "Cases", investigations_path %> </li>
           <li ><%= link_to "Applicants", applicants_path %></li>
           <li><%= link_to "Clients", clients_path%></li>
           <li><a href="#">All Detectives</a></li>
@@ -35,7 +35,8 @@
 </ul>
 </nav>
 </div>
-</div><h2>Change your password</h2>
+
+<h2>Change your password</h2>
 
 <%= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :put }) do |f| %>
   <%= f.error_notification %>
