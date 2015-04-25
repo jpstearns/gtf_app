@@ -36,57 +36,67 @@
 </nav>
 </div>
 <p id="notice"><%= notice %></p>
+    <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row 200%">
+            <div class="4u 12u(narrower)">
+              <div id="sidebar">
 
-<h1>Listing Applicants</h1>
+                <!-- Sidebar -->
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Social</th>
-      <th>Email</th>
-      <th>Address</th>
-      <th>Line2</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Zip</th>
-      <th>Phone1</th>
-      <th>Phone2</th>
-      <th>Company</th>
-      <th>Comments</th>
-      <th>Dob</th>
-      <th>Typeofapplication</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+                  <section>
+                    <h3>Search Applicants</h3>
+                  </section>
+                  <section>
+                    <footer>
+                      <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+                    </footer>
+                  </section>
 
-  <tbody>
-    <% @applicants.each do |applicant| %>
-      <tr>
-        <td><%= applicant.first_name %></td>
-        <td><%= applicant.last_name %></td>
-        <td><%= applicant.social %></td>
-        <td><%= applicant.email %></td>
-        <td><%= applicant.address %></td>
-        <td><%= applicant.line2 %></td>
-        <td><%= applicant.city %></td>
-        <td><%= applicant.state %></td>
-        <td><%= applicant.zip %></td>
-        <td><%= applicant.phone1 %></td>
-        <td><%= applicant.phone2 %></td>
-        <td><%= applicant.company %></td>
-        <td><%= applicant.comments %></td>
-        <td><%= applicant.dob %></td>
-        <td><%= applicant.typeOfApplication %></td>
-        <td><%= link_to 'Show', applicant %></td>
-        <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
-        <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+              </div>
+            </div>
+            <div class="8u  12u(narrower) important(narrower)">
+              <div id="content">
 
+                <!-- Content -->
+
+                  <article>
+                    <header>
+                      <h2>Applicant Records</h2>
+                      <p>This table lists information about all applicants</p>
+                    </header>
+                      <table class="default">
+                        <thead>
+                          <tr>
+                            <th>First</th>
+                            <th>Last</th>
+                            <th>Social</th>
+                            <th colspan="3"></th>
+                          </tr>
+                        </thead>
+
+                        <tbody>
+                          <% @applicants.each do |applicant| %>
+                            <tr>
+                              <td><%= applicant.first_name %></td>
+                              <td><%= applicant.last_name %></td>
+                              <td><%= applicant.social %></td>
+                              <td><%= link_to 'Show', applicant %></td>
+                              <td><%= link_to 'Edit', edit_applicant_path(applicant) %></td>
+                              <td><%= link_to 'Destroy', applicant, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                            </tr>
+                          <% end %>
+                        </tbody>
+                      </table>
+
+                  </article>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 <br>
 
 <%= link_to 'New Applicant', new_applicant_path %>
