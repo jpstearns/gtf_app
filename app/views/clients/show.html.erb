@@ -35,52 +35,50 @@
 </ul>
 </nav>
 </div>
-<p id="notice"><%= notice %></p>
-<h1>Editing Applicant</h1>  
+<p id="notice"><%= notice %></p> 
 </ul>
 </nav>
 </div>
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Clientname:</strong>
-  <%= @client.clientName %>
-</p>
+    <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div id="content">
 
-<p>
-  <strong>Clientphone:</strong>
-  <%= @client.clientPhone %>
-</p>
+            <!-- Content -->
 
-<p>
-  <strong>Clientemail:</strong>
-  <%= @client.clientEmail %>
-</p>
-
-<p>
-  <strong>Address1:</strong>
-  <%= @client.address1 %>
-</p>
-
-<p>
-  <strong>Address2:</strong>
-  <%= @client.address2 %>
-</p>
-
-<p>
-  <strong>City:</strong>
-  <%= @client.city %>
-</p>
-
-<p>
-  <strong>State:</strong>
-  <%= @client.state %>
-</p>
-
-<p>
-  <strong>Zip:</strong>
-  <%= @client.zip %>
-</p>
-
-<%= link_to 'Edit', edit_client_path(@client) %> |
-<%= link_to 'Back', clients_path %>
+              <article>  
+                <table class="default">
+                <thead>
+                  <tr>
+                    <th>New Client Information:</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td colspan="4">
+                      </tr>
+                    </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Client Name: <%= @client.clientName %></td>
+                    <td>Client Phone: <%= @client.clientPhone %> </td>
+                    <td>Client Email: <%= @client.clientEmail %></td>
+                  </tr>
+                <tr>
+                  <td>Adress: <%= @client.address1 %></td>
+                  <td>Line 2: <%= @client.address2 %></td>
+                  <td>Thanks for Reviewing<td>
+                </tr>
+                <tr>
+                  <td>City: <%= @client.city %></td>
+                  <td>State: <%@client.state %></td>
+                  <td>Zip: <%= @client.zip%></td>
+                </tr>
+                </tbody>
+                </table>
+                </div>
+              </article>
+          </div>
+        </div>
+      </section>
