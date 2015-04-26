@@ -5,7 +5,7 @@ class Client < ActiveRecord::Base
 
 	def self.search(search)
 	  if search
-	    @clients = Client.where(:all, :conditions => ['clientName LIKE ?', "%#{search}%"])
+	    @clients = Client.where("clientName LIKE ?", "%#{search}%")
 	  else
 	    @clients = Client.all
 	  end

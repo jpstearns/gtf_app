@@ -5,7 +5,7 @@ class Applicant < ActiveRecord::Base
 	
 	def self.search(search)
 	  if search
-	    @applicants = Applicant.where(:all, :conditions => ['first_name LIKE ?', "%#{search}%"])
+	   @applicants = Applicant.where("first_name LIKE ?", "%#{search}%")
 	  else
 	    @applicants = Applicant.all
 	  end
