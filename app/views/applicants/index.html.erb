@@ -46,7 +46,13 @@
                 <!-- Sidebar -->
 
                   <section>
-                    <h3>Search Applicants</h3>
+                    <%= form_tag("/search", method: "get") do %>
+                      <%= label_tag(:q, "Search for:") %>
+                      <%= text_field_tag(:q) %>
+                      <br>
+                      <%= submit_tag("Search") %>
+                    <% end %>
+                    <br>
                   </section>
                   <section>
                     <footer>

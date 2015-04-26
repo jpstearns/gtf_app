@@ -44,9 +44,16 @@
               <div id="sidebar">
 
                 <!-- Sidebar -->
+                <section>
                   <section>
-                    <h3>Search Cases</h3>
-                    <footer>
+                    <%= form_tag("/search", method: "get") do %>
+                      <%= label_tag(:q, "Search for:") %>
+                      <%= text_field_tag(:q) %>
+                      <br>
+                      <%= submit_tag("Search") %>
+                    <% end %>
+                    <br>
+                  </section>
                       <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
                     </footer>
                   </section>
