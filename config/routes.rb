@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
-  resources :cases
-
-  get 'jason/jason_hang_out'
 
   resources :clients
 
   resources :applicants
+
+  resources :investigations
+
+  devise_for :users
+  
+  devise_for :installs
 
   get 'jason/jasons_hang_out'
 
@@ -28,12 +31,9 @@ Rails.application.routes.draw do
   get 'investigations/show'
 
   post 'investigations/new'
-
-  devise_for :users
-  devise_for :installs
+  
   get 'welcome/index'
-  resources :investigations
-
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
