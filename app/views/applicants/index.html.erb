@@ -47,8 +47,8 @@
 
                   <section>
                     <%= form_tag("/applicants", method: "get") do %>
-                      <%= label_tag(:applicants, "Search for:") %>
-                      <%= text_field_tag(:q) %>
+                      <%= label_tag(:search, "Search Applicants:") %>
+                      <%= text_field_tag(:search) %>
                       <br>
                       <%= submit_tag("Search") %>
                     <% end %>

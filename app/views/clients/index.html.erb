@@ -48,8 +48,8 @@
                   <section>
                   <section>
                     <%= form_tag("/clients", method: "get") do %>
-                      <%= label_tag(:q, "Search for:") %>
-                      <%= text_field_tag(:q) %>
+                      <%= label_tag(:search, "Search Clients:") %>
+                      <%= text_field_tag(:search) %>
                       <br>
                       <%= submit_tag("Search") %>
                     <% end %>
