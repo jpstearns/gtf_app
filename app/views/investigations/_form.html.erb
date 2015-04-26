@@ -13,7 +13,7 @@
                   <section>
                     <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
                     <h3>Applicant Information</h3>
-                        <%= f.input :licenseType, collection: Case::License.all, label:"License Type"%>
+                        <%= f.input :licenseType, collection: Investigation::License.all, label:"License Type"%>
                         <%= f.input :applicant_name, label:"Applicant Name" %>
                         <%= f.input :applicant_dob, label: "Date Of Birth" %>
                         <%= f.input :applicant_social, label: "Social Security Number" %><br>
@@ -33,7 +33,7 @@
                         <%= f.input :user_badge_number %>
                         <%= f.input :caseNumber %>
                         <%= f.input :gaming_license_number %>
-                        <%= f.input :position, collection: Case::Position.all %>
+                        <%= f.input :position, collection: Investigation::Position.all %>
                   </article>
 
               </div>
@@ -46,10 +46,10 @@
                   <section>
                     <h3>Case Information</h3>
                     <ul class="links">
-                      <%= f.input :location, collection: Case::Location.all %>
+                      <%= f.input :location, collection: Investigation::Location.all %>
                       <%= f.input :assigned_date %>
                       <%= f.input :closed_date %>
-                      <%= f.input :status, collection: Case::Status.all %>
+                      <%= f.input :status, collection: Investigation::Status.all %>
 
                     </ul>
                     <footer>

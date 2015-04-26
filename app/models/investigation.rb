@@ -116,9 +116,9 @@ class Investigation < ActiveRecord::Base
 
 	def self.search(search)
 	  if search
-	    @investigations = Investigations.find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+	    @investigations = Investigation.find(:all, :conditions => ['applicant_name LIKE ?', "%#{search}%"])
 	  else
-	    @investigations = Investigations.all
+	    @investigations = Investigation.all
 	  end
 	end
 end

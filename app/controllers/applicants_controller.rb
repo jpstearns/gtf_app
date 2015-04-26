@@ -4,14 +4,14 @@ class ApplicantsController < ApplicationController
   # GET /applicants
   # GET /applicants.json
   def index
-  #@applicants = Applicant.all
   @applicants = Applicant.search(params[:search])
-end
   end
 
   # GET /applicants/1
   # GET /applicants/1.json
-  def show
+  def show 
+  end
+  
   # GET /applicants/new
   def new
     @applicant = Applicant.new
