@@ -113,4 +113,13 @@ class Investigation < ActiveRecord::Base
 	        @keys
 	    end
 	end
+
+	def self.search(search)
+	  if search
+	    @investigations = Investigations.find(:all, :conditions => ['name LIKE ?', "%#{search}%"])
+	  else
+	    @investigations = Investigations.all
+	  end
+	end
 end
+

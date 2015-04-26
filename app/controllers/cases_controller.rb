@@ -4,7 +4,8 @@ class CasesController < ApplicationController
   # GET /cases
   # GET /cases.json
   def index
-    @investigation = Case.all
+    @Investigations = Investigations.search(params[:search])
+end
   end
 
   # GET /cases/1

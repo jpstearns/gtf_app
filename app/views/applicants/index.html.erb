@@ -46,8 +46,8 @@
                 <!-- Sidebar -->
 
                   <section>
-                    <%= form_tag("/search", method: "get") do %>
-                      <%= label_tag(:q, "Search for:") %>
+                    <%= form_tag("/applicants", method: "get") do %>
+                      <%= label_tag(:applicants, "Search for:") %>
                       <%= text_field_tag(:q) %>
                       <br>
                       <%= submit_tag("Search") %>
