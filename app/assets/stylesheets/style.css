@@ -639,19 +639,10 @@
 					        transition: all .25s;
 				}
 
-				.planContainer .button a:hover {
+				.buttonplan a:hover {
 					background: #3e4f6a;
 					color: #fff;
 				}
-
-				.planContainer .button a.bestPlanButton:hover {
-					background: #ff9c70;
-					border: 2px solid #ff9c70;
-				}
-
-				}
-
-							}
 
 /* Button */
 
