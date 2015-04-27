@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
 
+<<<<<<< HEAD
   get 'assignments/show'
+=======
+  get 'calendar/show'
+
+  resources :events
+>>>>>>> 68d3276cae9929fe94f2a2abdcdb72e0c1a428b3
 
   resources :clients
 
