@@ -1,8 +1,8 @@
 class AssignmentsController < ApplicationController
-<<<<<<< HEAD
+
   def show
   end
-=======
+
   before_action :set_assignment, only: [:show, :edit, :update, :destroy]
 
   # GET /assignments
@@ -75,5 +75,4 @@ class AssignmentsController < ApplicationController
     def assignment_params
       params[:assignment]
     end
->>>>>>> 68d3276cae9929fe94f2a2abdcdb72e0c1a428b3
 end
