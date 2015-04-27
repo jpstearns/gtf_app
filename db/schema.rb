@@ -11,11 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150426203522) do
-=======
 ActiveRecord::Schema.define(version: 20150427053430) do
->>>>>>> 68d3276cae9929fe94f2a2abdcdb72e0c1a428b3
+
 
   create_table "applicants", force: :cascade do |t|
     t.string   "first_name"
@@ -50,8 +47,7 @@ ActiveRecord::Schema.define(version: 20150427053430) do
     t.datetime "updated_at",  null: false
   end
 
-<<<<<<< HEAD
-=======
+
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
@@ -84,7 +80,7 @@ ActiveRecord::Schema.define(version: 20150427053430) do
 
   add_index "fullcalendar_engine_events", ["event_series_id"], name: "index_fullcalendar_engine_events_on_event_series_id"
 
->>>>>>> 68d3276cae9929fe94f2a2abdcdb72e0c1a428b3
+
   create_table "installs", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
