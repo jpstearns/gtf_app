@@ -424,12 +424,14 @@
 	border-collapse: collapse;}
 
 .calendar th{
-	font-size:25px;background-color:#333;
+	font-size:20px;
+	background-color:#333;
 	border-width: 2px;
 	border-style: solid;
 	border-color: black;
 	text-align:center;
-	color: #fff;}
+	color: #fff;
+	line-height: 21px;}
 
 .calendar tr {
 	background-color:#fff;
