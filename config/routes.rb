@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'pages/calendar'
+
   get 'assignments/show'
 
   get 'calendar/show'
