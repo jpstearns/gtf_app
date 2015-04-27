@@ -428,17 +428,20 @@
 	background-color:#333;
 	border-width: 2px;
 	border-style: solid;
-	border-color: black;
+	border-color: gray;
 	text-align:center;
 	color: #fff;
 	line-height: 21px;}
 
 .calendar tr {
-	background-color:#fff;
+	border-color: #37c0fb;
+	background-color: #fff;
 	text-align: right;
+	vertical-align: top;
 	line-height: 60px;}
 
 .calendar td {
+	border-color: #37c0fb;
 	font-size:20px;
 	border-width: 2px;
 	padding: 8px;

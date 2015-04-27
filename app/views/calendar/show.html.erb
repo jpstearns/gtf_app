@@ -46,8 +46,8 @@
 
 									<article>
 										<header>
-											<h2>Assignments Calendar</h2>
-											<p>Welcome to your Investigations tracker</p>
+											<h2>Assignments Manager</h2>
+											<p>You can use this page to efficiently manage the Detectives' case load.</p>
 										</header>
 									<div class= "calendar">	
 									<center>	
@@ -64,27 +64,19 @@
 							<div id="sidebar">
 
 								<!-- Sidebar -->
-
 									<section>
-										<h3>Assignment Manager</h3>
-										<p>You can use this page to track both the start and stop dates to manage Background Check Investigations for Rhode Island State Gaming Employees</p>
-										<footer>
-											
 										<span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
-
-										</footer>
-									</section>
-
-									<section>
 										<h3>Make an Assignment</h3>
-										<ul class="links">
-											<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-											<li><a href="#">Ornare in hendrerit in lectus</a></li>
-											<li><a href="#">Semper mod quis eget mi dolore</a></li>
-											<li><a href="#">Consequat etiam lorem phasellus</a></li>
-											<li><a href="#">Amet turpis, feugiat et sit amet</a></li>
-											<li><a href="#">Semper mod quisturpis nisi</a></li>
-										</ul>
+										<form action="">
+											Started On: <input type = "date" date=started>
+											Ended On: <input type = "date" date="ended">
+											Detective: <br><input style = "width: 100%;"type = "string" name="last_name">
+											<br>
+											Applicant ID: <br><input style = "width: 100%;" type = "integer" id="applicant.id">
+											<br><br>
+											<input type="submit" value="submit" onclick="return alert('Detective, you will need the administrator rights to make assignments. This function is meant for the Sergeant.')"/>
+										</form>
+											<br>
 									</section>
 							</div>
 						</div>
