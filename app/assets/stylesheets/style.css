@@ -417,7 +417,45 @@
 
 	table {
 		width: 100%;
-	}
+		   border: 1px solid #999;
+		   border-collapse: collapse;
+		   font-family: Georgia, Times, serif;
+		   background-color: white; 
+		   color: #37c0fb;
+		   }
+		   th {
+		   border: 1px solid #999;
+		   font-size: 70%;
+		   text-transform: uppercase;
+		   background-color: #333;
+		   color: white;
+		   }
+		   td {
+		   border: 1px solid #999;
+		   height: 5em;
+		   width:5em;
+		   padding: 5px;
+		   vertical-align: top;
+		   }
+		   caption {
+		   font-size: 300%;
+		   font-style: italic;
+		   }
+		   .day {
+		   text-align: right;
+		   }
+		   .notes {
+		   font-family: Arial, Helvetica, sans-serif;
+		   font-size: 80%;
+		   text-align: right;
+		   padding-left: 20px;
+		   }
+		   .birthday {
+		   background-color: #ECE;
+		   }
+		   .weekend {
+		   background-color: #F3F3F3;
+		   }
 
 		table.default {
 			width: 100%;

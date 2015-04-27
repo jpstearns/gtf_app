@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'calendar/show'
+
+  resources :events
+
   resources :clients
 
   resources :applicants
