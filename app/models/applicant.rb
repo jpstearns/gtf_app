@@ -1,6 +1,6 @@
 class Applicant < ActiveRecord::Base
    
-    has_many :investigations, dependent: :destroy
+    has_many :investigations
 
 	validates_presence_of :first_name, :last_name, :social, :dob
 	validates :email, format: { with: /\A([^@\s]+)@((?:[-a-z0-9]+\.)+[a-z]{2,})\z/i, on: :create }
