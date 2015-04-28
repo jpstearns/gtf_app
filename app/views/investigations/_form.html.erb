@@ -1,26 +1,117 @@
-  <%= form_for(@investigation) do |f| %>
-    <% if @investigation.errors.any? %>
-      <div id="error_explanation">
-        <h2><%= pluralize(@investigation.errors.count, "error") %> prohibited this investigation from being saved:</h2>
-
-        <ul>
-        <% @investigation.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-        </ul>
-      </div>
-    <% end %>
-                    <section>
-                      <%= form_tag applicants_path, :method => 'get', :id => "applicants_search", remote: :true do %>
-                        <p>
-                          <%= text_field_tag :search, params[:search] %>
-                          <%= submit_tag "Search", :name => nil %>
-                        </p>
-                        <div id="applicant"><%= render 'applicant' %></div>
-                      <% end %>
-                      <br>
-                    </section>
-    <div class="actions">
-      <%= f.submit %>
+<%= form_for(@investigation) do |f| %>
+  <% if @investigation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@investigation.errors.count, "error") %> prohibited this investigation from being saved:</h2>
+      <ul>
+      <% @investigation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
     </div>
   <% end %>
+    <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row 200%">
+            <div class="4u 12u(narrower)">
+              <div id="sidebar">
+
+                <!-- Sidebar -->
+                <section>
+                  <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+                    <%= form_tag("/applicants", method: "get") do %>
+                      <%= label_tag(:search, "Search Applicants:") %>
+                      <%= text_field_tag(:search) %>
+                      <br>
+                      <%= submit_tag("Search") %>
+                    <% end %>
+                    <br>
+
+              </div>
+            </div>
+              <!-- Content -->
+                  <article>
+                    <header>
+                      <h2>Welcome Detective:</h2>
+                      <p>The following form will submit an investigation for review.</p>
+                      <section>
+                        <%= label_tag :user_badge_number %>
+                        <%= text_field_tag :user_badge_number %>
+                      </section>
+                    </header>
+                  </article>
+                <div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!-- Posts -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div class="row">
+            <section class="6u 12u(narrower)">
+              <div class="box post">
+                <a href="#" class="image left"><img src="/assets/pic01.jpg" alt="" /></a>
+                <div class="inner">
+                  <h3> Applicant: SSN or EIN Number</h3>
+                   <div class="field">
+                      <br>
+                    <%= f.text_field :applicant_social %>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="6u 12u(narrower)">
+              <div class="box post">
+                <a href="#" class="image left"><img src="/assets/pic02.jpg" alt="" /></a>
+                <div class="inner">
+                   <h3> Client Identification Number</h3>
+                  <div class="field">
+                    <br>
+                    <%= f.number_field :client_id %>
+                    </div>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="row">
+            <section class="6u 12u(narrower)">
+              <div class="box post">
+                <a href="#" class="image left"><img src="/assets/pic03.jpg" alt="" /></a>
+                <div class="inner">
+                  <h3>Investigation Status</h3>
+                  <div class="field">
+                    <%= f.text_field :status %>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="6u 12u(narrower)">
+              <div class="box post">
+                <a href="#" class="image left"><img src="/assets/pic04.jpg" alt="" /></a>
+                <div class="inner">
+                  <h3>Renewal Date</h3>
+                    <div class="field">
+                        <%=f.date_field :renewal %>
+                    </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </section>
+
+    <!-- CTA -->
+      <section id="cta" class="wrapper style3">
+        <div class="container">
+          <header>
+            <h2>Click Here to Submit the Investigation</h2>
+              </div>
+                <div class="actions">
+                  <input type="submit" Value ="Submit" >
+               </div>
+          </header>
+        </div>
+      </section>
+<% end %>

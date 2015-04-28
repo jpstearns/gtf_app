@@ -1042,11 +1042,11 @@
 			margin: 0;
 		}
 
-		#cta header .button {
-			vertical-align: middle;
-			margin-left: 1em;
-		}
+		#cta input{	
+				background: white;
+				color: #474747;
 
+		}
 /*Footer*/
 	#footer {
 		padding: 4em 0 8em 0;

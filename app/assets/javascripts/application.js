@@ -27,3 +27,8 @@ $(function() {
     return false;
   });
 });
+
+
+$(function() {
+  $("#renewal").datepicker();
+});

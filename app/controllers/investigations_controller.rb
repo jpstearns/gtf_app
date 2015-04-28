@@ -14,14 +14,7 @@ class InvestigationsController < ApplicationController
 
   # GET /investigations/new
   def new
-     @applicant = Applicant.search(params[:search])
     @investigation = Investigation.new
-  def live_search
-
-  @investigation = Task.find_latest params[:q]
-
-  render :layout => false
-end
   end
 
   # GET /investigations/1/edit
@@ -37,7 +30,6 @@ end
       if @investigation.save
         format.html { redirect_to @investigation, notice: 'Investigation was successfully created.' }
         format.json { render :show, status: :created, location: @investigation }
-        format.js
       else
         format.html { render :new }
         format.json { render json: @investigation.errors, status: :unprocessable_entity }
@@ -52,7 +44,6 @@ end
       if @investigation.update(investigation_params)
         format.html { redirect_to @investigation, notice: 'Investigation was successfully updated.' }
         format.json { render :show, status: :ok, location: @investigation }
-        format.js
       else
         format.html { render :edit }
         format.json { render json: @investigation.errors, status: :unprocessable_entity }
@@ -67,7 +58,6 @@ end
     respond_to do |format|
       format.html { redirect_to investigations_url, notice: 'Investigation was successfully destroyed.' }
       format.json { head :no_content }
-      format.js
     end
   end
 
@@ -79,6 +69,6 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def investigation_params
-      params[:investigation]
+      params.require(:investigation).permit(:applicant_social, :client_id, :user.id, :renewal)
     end
 end

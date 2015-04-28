@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  resources :investigations
+
   get 'pages/calendar'
 
   get 'assignments/show'
@@ -13,8 +15,6 @@ Rails.application.routes.draw do
   resources :clients
 
   resources :applicants
-
-  resources :investigations
 
   devise_for :users
   
