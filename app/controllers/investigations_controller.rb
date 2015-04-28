@@ -4,7 +4,7 @@ class InvestigationsController < ApplicationController
   # GET /investigations
   # GET /investigations.json
   def index
-    @investigations = Investigation.search(params[:search])
+    @investigations = Investigation.all
   end
 
   # GET /investigations/1
@@ -69,6 +69,6 @@ class InvestigationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def investigation_params
-      params.require(:investigation).permit(:typeOfCase, :user_id, :applicant_id, :client_id, :status, :licenseType, :position, :renewal, :applicant_name, :applicant_dob, :applicant_social, :caseNumber, :gaming_license_number, :location, :assigned_date, :closed_date, :user_badge_number)
+      params[:investigation]
     end
 end
