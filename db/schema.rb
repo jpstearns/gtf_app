@@ -65,8 +65,15 @@ ActiveRecord::Schema.define(version: 20150428005738) do
   add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
 
   create_table "investigations", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+    t.integer  "applicant_id"
+    t.integer  "client_id"
+    t.string   "status"
+    t.string   "license_typ"
+    t.string   "position"
+    t.date     "renewal"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "users", force: :cascade do |t|

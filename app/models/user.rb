@@ -1,5 +1,4 @@
 class User < ActiveRecord::Base
-  
 	has_many :investigations 
 	has_many :applicants, :through => :cases
   # Include default devise modules. Others available are:

@@ -1,17 +1,26 @@
-<%= form_for(@investigation) do |f| %>
-  <% if @investigation.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@investigation.errors.count, "error") %> prohibited this investigation from being saved:</h2>
+  <%= form_for(@investigation) do |f| %>
+    <% if @investigation.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@investigation.errors.count, "error") %> prohibited this investigation from being saved:</h2>
 
-      <ul>
-      <% @investigation.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @investigation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+                    <section>
+                      <%= form_tag applicants_path, :method => 'get', :id => "applicants_search", remote: :true do %>
+                        <p>
+                          <%= text_field_tag :search, params[:search] %>
+                          <%= submit_tag "Search", :name => nil %>
+                        </p>
+                        <div id="applicant"><%= render 'applicant' %></div>
+                      <% end %>
+                      <br>
+                    </section>
+    <div class="actions">
+      <%= f.submit %>
     </div>
   <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>

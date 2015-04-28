@@ -41,32 +41,31 @@
       <li class="plan">
         <ul class="planContainer">
           <li class="title"><h2>Applicant</h2></li>
-          <li class="price"><p>Name:<span><%= @investigation.applicant_name %></span></p></li>
+          <li class="price"><p>Name:<span><%= @investigation.applicant %></span></p></li>
           <li>
             <ul class="options">
-              <li>Social:<span><%= @investigation.applicant_social %></span></li>
-              <li>Date of Birth:<span><%= @investigation.applicant_dob %></span></li>
+              <li>Social:<span><%= @investigation.applicant%></span></li>
+              <li>Date of Birth:<span><%= @investigation.applicant%></span></li>
               <li>Business: <span>CCRI</span></li>
               <li>Date Applied: <span>04/20/2015</li>
             </ul>
           </li>
-          <li><a class="pure-button pure-button-primary" href="#"><%= @investigation.position %></a></li>
+          <li><a class="pure-button pure-button-primary" href="#"><%= @investigation.applicant %></a></li>
         </ul>
       </li>
 
       <li class="plan">
         <ul class="planContainer">
           <li class="title"><h2>Vendor</h2></li>
-          <li class="price"><p>Client:<span><%= @investigation.location %></span></p></li>
+          <li class="price"><p>Client:<span><%= @investigation.client %></span></p></li>
           <li>
             <ul class="options">
-              <li>License Type:<span><%= @investigation.licenseType %></span></li>
-              <li>Gaming License#:<span><%= @investigation.gaming_license_number %></span></li>
-              <li>Applied For:<span><%= @investigation.position %></span></li>
+              <li>License Type:<span><%= @investigation.applicant %></span></li>
+              <li>Applied For:<span><%= @investigation.applicant %></span></li>
               <li>THANKS FOR PLAYING</span></li>
             </ul>
           </li>
-          <li><a class="pure-button pure-button-primary" href="#"><%= @investigation.status %></a></li>
+          <li><a class="pure-button pure-button-primary" href="#"><%= %></a></li>
         </ul>
       </li>
 

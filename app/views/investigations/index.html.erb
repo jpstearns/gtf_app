@@ -1,7 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-<h1>Listing Investigations</h1>
-
 <!-- Nav -->
 <nav id="nav">
   <p class="navbar-text pull-right">
@@ -89,9 +86,9 @@
                             <tr>
                               <td><%= investigation.user_badge_number %></td>
                               <td><%= investigation.caseNumber %></td>
-                              <td><%= investigation.applicant_name %></td>
+                              <td><%= investigation.applicant_id %></td>
                               <td><%= investigation.status %></td>
-                              <td><%= investigation.applicant_social %></td>
+                              <td><%= investigation.applicant_id %></td>
                               <td><%= link_to 'Show', investigation %></td>
                               <td><%= link_to 'Edit', edit_investigation_path(investigation) %></td>
                               <td><%= link_to 'Destroy', investigation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
