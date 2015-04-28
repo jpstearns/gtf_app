@@ -1,5 +1,5 @@
 class Client < ActiveRecord::Base
-	has_many :investigations dependent: :destroy 
+	has_many :investigations 
 	validates_presence_of :clientName, :address1, :city, :state, :message => "Missing a required field" 
 
 	def self.search(search)
