@@ -6,9 +6,8 @@ class CreateInvestigations < ActiveRecord::Migration
       t.integer :client_id
       t.string :status
       t.date :renewal
-      t.text :comments
-
-      t.timestamps null: false
+      
+    t.timestamps null: false
     end
   end
 end
