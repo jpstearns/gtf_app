@@ -37,37 +37,52 @@
 </div>
 
 <p id="notice"><%= notice %></p>
+    <!-- Main -->
+      <section class="wrapper style1">
+        <div class="container">
+          <div id="content">
+
+            <!-- Content -->
+
+              <article>  
+                <table class="default">
+                <thead>
+                  <tr>
+                    <th>New Investigation Information:</th>
+                  </tr>
+                </thead>
+                <tfoot>
+                  <tr>
+                    <td colspan="4">
+                      </tr>
+                    </tfoot>
+                <tbody>
+                  <tr>
+                    <td>Applicant Id: </td>
+                    <td><%= @investigation.applicant_id %> </td>
+                    <td>Client ID: </td> 
+                    <td><%= @investigation.client_id %>
+                  </tr>
+                <tr>
+                  <td>User Badge Number</td>
+                  <td><%= @investigation.user_badge_number%></td>
+                  <td>Application Status</td>
+                  <td><%= @investigation.status %></td> 
+                </tr>
+                <tr>
+                  <td>Investigation Completed: </td>
+                  <td><%= @investigation.created_at %></td>
+                  <td>License Renewal: </td>
+                  <td><%= @investigation.renewal%></td>
+                </tr>
+              </tbody>
+            </table>
+                  <strong>Comments:</strong>
+                 <%= @investigation.comments %>
+                </p>
+              </article>
+          </div>
+        </div>
+      </section>
 
 
-<p>
-  <strong>Applicant:</strong>
-  <%= @investigation.applicant_id %>
-</p>
-
-<p>
-  <strong>Client:</strong>
-  <%= @investigation.client_id %>
-</p>
-
-<p>
-  <strong>User badge number:</strong>
-  <%= @investigation.user_badge_number %>
-</p>
-
-<p>
-  <strong>Status:</strong>
-  <%= @investigation.status %>
-</p>
-
-<p>
-  <strong>Renewal:</strong>
-  <%= @investigation.renewal %>
-</p>
-
-<p>
-  <strong>Comments:</strong>
-  <%= @investigation.comments %>
-</p>
-
-<%= link_to 'Edit', edit_investigation_path(@investigation) %> |
-<%= link_to 'Back', investigations_path %>
