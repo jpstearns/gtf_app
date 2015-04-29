@@ -70,6 +70,7 @@ ActiveRecord::Schema.define(version: 20150428234708) do
     t.integer  "client_id"
     t.string   "status"
     t.date     "renewal"
+    t.text     "comments"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
