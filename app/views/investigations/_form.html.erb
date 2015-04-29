@@ -37,11 +37,14 @@
                       <p>Lets begin an investigation and submit it for review.</p>
                       <section>
                         <div class="field">
-                          <%= f.text_field :user_badge_number, placeholder: "Badge Number" %>
+                           <%= label_tag(:q, "Badge Numger") %>
+                          <%= f.text_field :user_badge_number, placeholder: "XXXXXXXXXXX" %>
                         </div>
+                        <br>
                       </section>
                     </header>
-                    <%= f.text_area :comments, placeholder: "Comments" %>
+                     <%= label_tag(:comments, "Comments") %>
+                    <%= f.text_area :comments, placeholder: "149 character limit on each comment" %>
                   </article>
                 <div>
               </div>
