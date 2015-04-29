@@ -2,12 +2,14 @@
 
 one:
   applicant_social: MyString
-  client_id: 1
-  user.id: MyString
+  user_badge_number: MyString
+  cient_id: 1
+  status: MyString
   renewal: 2015-04-28
 
 two:
   applicant_social: MyString
-  client_id: 1
-  user.id: MyString
+  user_badge_number: MyString
+  cient_id: 1
+  status: MyString
   renewal: 2015-04-28

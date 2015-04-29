@@ -1,1 +1,1 @@
-json.extract! @investigation, :id, :applicant_social, :client_id, :user.id, :renewal, :created_at, :updated_at
+json.extract! @investigation, :id, :applicant_social, :user_badge_number, :cient_id, :status, :renewal, :created_at, :updated_at

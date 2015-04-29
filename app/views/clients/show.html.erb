@@ -68,7 +68,7 @@
                 <tr>
                   <td>Adress: <%= @client.address1 %></td>
                   <td>Line 2: <%= @client.address2 %></td>
-                  <td>Thanks for Reviewing<td>
+                  <td>Client ID: <%= @client.id %> <td>
                 </tr>
                 <tr>
                   <td>City: <%= @client.city %></td>
@@ -82,3 +82,6 @@
           </div>
         </div>
       </section>
+
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

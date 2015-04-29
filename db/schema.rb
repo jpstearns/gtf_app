@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150428195657) do
+ActiveRecord::Schema.define(version: 20150428234708) do
 
   create_table "applicants", force: :cascade do |t|
     t.string   "first_name"
@@ -65,12 +65,11 @@ ActiveRecord::Schema.define(version: 20150428195657) do
   add_index "installs", ["reset_password_token"], name: "index_installs_on_reset_password_token", unique: true
 
   create_table "investigations", force: :cascade do |t|
-    t.string   "user_badge_number"
-    t.string   "applicant_social"
+    t.integer  "applicant_id"
+    t.integer  "user_badge_number"
     t.integer  "client_id"
-    t.string   "user_id"
-    t.date     "renewal"
     t.string   "status"
+    t.date     "renewal"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end
@@ -90,7 +89,7 @@ ActiveRecord::Schema.define(version: 20150428195657) do
     t.datetime "updated_at"
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "badge_number"
+    t.integer  "badge_number"
     t.string   "phone_number"
     t.string   "desk_extenstion"
     t.string   "rank"

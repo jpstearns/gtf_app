@@ -79,8 +79,8 @@
                         <%= f.input :first_name, required: true, autofocus: true%>
                         <%= f.input :last_name, required: true, autofocus: true%>
                         <%= f.input :email, required: true, autofocus: true %>
-                        <%= f.input :badge_number, required: true, autofocus: true %>
-                        <%= f.input :phone_number, required: true, autofocus: true %>
+                        <%= f.input :badge_number, required: true, autofocus: true, as: :string%>
+                        <%= f.input :phone_number, required: true, autofocus: true, as: :string %>
                         <%= f.input :desk_extenstion, required: true, autofocus: true %>
                         <%= f.input :rank, required: true, autofocus: true %><br>
                         <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>

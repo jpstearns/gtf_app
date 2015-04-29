@@ -20,8 +20,8 @@
                   <section>
                     <h3>Contact Information</h3>
                       <%= f.input :email, placeholder: "user@domain.com" %>
-                      <%= f.input :phone1, label:"Primary Phone: " %>
-                      <%= f.input :phone2, label: "Secondary Phone: "%> 
+                      <%= f.input :phone1, label:"Primary Phone: ", as: :string, placeholder: "(XXX) XXX-XXXX" %>
+                      <%= f.input :phone2, label: "Secondary Phone: ", as: :string, placeholder: "(XXX) XXX-XXXX"%> 
                       
                   </section>
 
@@ -63,7 +63,7 @@
                         <h3> Application Type </h3> 
                     <div id="radio">
                       <div class="controls-row">
-                           <%= f.collection_radio_buttons :typeOfApplication, [[true, 'Business'] ,[false, 'Individual']], :first, :last %>
+                           <%= f.collection_radio_buttons :typeOfApplication, [[true, 'Business |'] ,[false, '| Individual']], :first, :last %>
                       </div>
                     </div>
                     <div class="form-actions">
