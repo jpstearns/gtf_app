@@ -1,4 +1,4 @@
 json.array!(@investigations) do |investigation|
-  json.extract! investigation, :id, :applicant_social, :user_badge_number, :cient_id, :status, :renewal
+  json.extract! investigation, :id, :applicant_id, :client_id, :user_badge_number, :status, :renewal, :comments
   json.url investigation_url(investigation, format: :json)
 end

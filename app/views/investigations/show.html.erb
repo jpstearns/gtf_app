@@ -35,73 +35,23 @@
 </ul>
 </nav>
 </div>
-  <section id="pricePlans">
-    <ul id="plans">
-      <li class="plan">
-        <ul class="planContainer">
-          <% @investigation.applicants.each do |applicant| %>
-          <li class="title"><h2>Applicant</h2></li>
-          <li class="price"><p>Name:<span><%= applicant.first_name %></span></p></li>
-          <li>
-            <ul class="options">
-              <li>Social:<span><%= @investigation.applicant_social %></span></li>
-              <li>Date of Birth:<span><%= @investigation.applicant_dob %></span></li>
-              <li>Business: <span>CCRI</span></li>
-              <li>Date Applied: <span>04/20/2015</li>
-            </ul>
-          </li>
-          <%end%>
-          <li><a class="pure-button pure-button-primary" href="#"><%= @investigation.position %></a></li>
-        </ul>
-      </li>
 
-      <li class="plan">
-        <ul class="planContainer">
-          <li class="title"><h2>Vendor</h2></li>
-          <li class="price"><p>Client:<span><%= @investigation.location %></span></p></li>
-          <li>
-            <ul class="options">
-              <li>License Type:<span><%= @applic %></span></li>
-              <li>Gaming License#:<span><%= @investigation.gaming_license_number %></span></li>
-              <li>Applied For:<span><%= @investigation.position %></span></li>
-              <li>THANKS FOR PLAYING</span></li>
-            </ul>
-          </li>
-          <li><a class="pure-button pure-button-primary" href="#"><%= @investigation.status %></a></li>
-        </ul>
-      </li>
-
-      <li class="plan">
-        <ul class="planContainer">
-          <li class="title"><h2>RI State Police</h2></li>
-          <li class="price"><p>Officer:<span>Mike Kelly</span></p></li>
-          <li> 
-            <ul class="options">
-              <li>Badge Number:<span><%= @investigation.user_badge_number %></span></li>
-              <li>Assigned:<span><%= @investigation.assigned_date %><span></li>
-              <li>Completed:<span><%= @investigation.closed_date %></span></li>
-              <li>Renewal:<span>4/29/2016</span></li>
-            </ul>
-          </li>
-          <li><a class="pure-button pure-button-primary" href="#">Detective</a></li>
-        </ul>
-      </li>
-    </ul> 
+<p id="notice"><%= notice %></p>
 
 
 <p>
-  <strong>Applicant social:</strong>
-  <%= @investigation.applicant_social %>
+  <strong>Applicant:</strong>
+  <%= @investigation.applicant_id %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @investigation.client_id %>
 </p>
 
 <p>
   <strong>User badge number:</strong>
   <%= @investigation.user_badge_number %>
-</p>
-
-<p>
-  <strong>Cient:</strong>
-  <%= @investigation.client_id %>
 </p>
 
 <p>
@@ -114,5 +64,10 @@
   <%= @investigation.renewal %>
 </p>
 
-<%= link_to 'Edit', edit_investigation_path(@client) %> |
+<p>
+  <strong>Comments:</strong>
+  <%= @investigation.comments %>
+</p>
+
+<%= link_to 'Edit', edit_investigation_path(@investigation) %> |
 <%= link_to 'Back', investigations_path %>

@@ -1,15 +1,17 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  applicant_social: MyString
+  applicant_id: 1
+  client_id: 1
   user_badge_number: MyString
-  cient_id: 1
   status: MyString
-  renewal: 2015-04-28
+  renewal: 2015-04-29
+  comments: MyText
 
 two:
-  applicant_social: MyString
+  applicant_id: 1
+  client_id: 1
   user_badge_number: MyString
-  cient_id: 1
   status: MyString
-  renewal: 2015-04-28
+  renewal: 2015-04-29
+  comments: MyText

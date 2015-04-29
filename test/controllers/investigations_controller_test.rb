@@ -18,7 +18,7 @@ class InvestigationsControllerTest < ActionController::TestCase
 
   test "should create investigation" do
     assert_difference('Investigation.count') do
-      post :create, investigation: { applicant_social: @investigation.applicant_social, cient_id: @investigation.cient_id, renewal: @investigation.renewal, status: @investigation.status, user_badge_number: @investigation.user_badge_number }
+      post :create, investigation: { applicant_id: @investigation.applicant_id, client_id: @investigation.client_id, comments: @investigation.comments, renewal: @investigation.renewal, status: @investigation.status, user_badge_number: @investigation.user_badge_number }
     end
 
     assert_redirected_to investigation_path(assigns(:investigation))
@@ -35,7 +35,7 @@ class InvestigationsControllerTest < ActionController::TestCase
   end
 
   test "should update investigation" do
-    patch :update, id: @investigation, investigation: { applicant_social: @investigation.applicant_social, cient_id: @investigation.cient_id, renewal: @investigation.renewal, status: @investigation.status, user_badge_number: @investigation.user_badge_number }
+    patch :update, id: @investigation, investigation: { applicant_id: @investigation.applicant_id, client_id: @investigation.client_id, comments: @investigation.comments, renewal: @investigation.renewal, status: @investigation.status, user_badge_number: @investigation.user_badge_number }
     assert_redirected_to investigation_path(assigns(:investigation))
   end
 

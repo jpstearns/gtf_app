@@ -104,38 +104,3 @@
 <br>
 
 <%= link_to 'New Investigation', new_investigation_path %>
-<p id="notice"><%= notice %></p>
-
-<h1>Listing Investigations</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Applicant social</th>
-      <th>User badge number</th>
-      <th>Client</th>
-      <th>Status</th>
-      <th>Renewal</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @investigations.each do |investigation| %>
-      <tr>
-        <td><%= investigation.applicant_social %></td>
-        <td><%= investigation.user_badge_number %></td>
-        <td><%= investigation.client_id %></td>
-        <td><%= investigation.status %></td>
-        <td><%= investigation.renewal %></td>
-        <td><%= link_to 'Show', investigation %></td>
-        <td><%= link_to 'Edit', edit_investigation_path(investigation) %></td>
-        <td><%= link_to 'Destroy', investigation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Investigation', new_investigation_path %>

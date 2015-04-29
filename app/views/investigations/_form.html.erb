@@ -1,6 +1,8 @@
- <% if @investigation.errors.any? %>
+
+  <% if @investigation.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@investigation.errors.count, "error") %> prohibited this investigation from being saved:</h2>
+
       <ul>
       <% @investigation.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -8,7 +10,6 @@
       </ul>
     </div>
   <% end %>
-
     <!-- Main -->
       <section class="wrapper style1">
         <div class="container">
@@ -17,36 +18,43 @@
               <div id="sidebar">
 
                 <!-- Sidebar -->
-                <section allign="left">
-                  <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
-                    <%= form_tag("/applicants", method: "get") do %>
+
+                  <section>
+                    <span class="image featured"><img src="/assets/banner.jpg" alt="" /></span>
+                      
+                      <%= form_tag("/applicants", method: "get") do %>
                       <%= label_tag(:search, "Search Applicants:") %>
                       <%= text_field_tag(:search) %>
                       <br>
                       <%= submit_tag("Search") %>
                     <% end %>
                     <br>
-
+                      <p> This Form will help guide the Detective and keep track of pertinent information that is collected throughout the investigation. The Submit button will submit an Investigation to the Sergeant for Approval. </p>
+                  </section>
               </div>
             </div>
-              <!-- Content -->
-              <%= form_for(@investigation) do |f| %>
+            <div class="8u  12u(narrower) important(narrower)">
+              <div id="content">
+
+                <!-- Content -->
+
                   <article>
                     <header>
-                      <h2>Welcome Detective:</h2>
-                      <p>Lets begin an investigation and submit it for review.</p>
-                      <section>
-                        <div class="field">
-                           <%= label_tag(:q, "Badge Numger") %>
-                          <%= f.text_field :user_badge_number, placeholder: "XXXXXXXXXXX" %>
-                        </div>
-                        <br>
-                      </section>
+                      <%= form_for(@investigation) do |f| %>
+                      <h2>New Investigation:</h2>
+                      <p>Welcome Detective, lets begin a new investigation and submit it for review</p>
                     </header>
-                     <%= label_tag(:comments, "Comments") %>
-                    <%= f.text_area :comments, placeholder: "149 character limit on each comment" %>
+                      <div class="field">
+                        <%= f.label :user_badge_number, "Badge Number" %><br>
+                        <%= f.text_field :user_badge_number %>
+                      </div>
+                      <br>
+                        <div class="field">
+                          <%= f.label :comments %><br>
+                          <%= f.text_area :comments, placeholder:"Comments cannot exceed 149 characters..."%>
+                        </div>
                   </article>
-                <div>
+
               </div>
             </div>
           </div>
@@ -60,11 +68,10 @@
               <div class="box post">
                 <a href="#" class="image left"><img src="/assets/pic01.jpg" alt="" /></a>
                 <div class="inner">
-                  <h3> Applicant: ID Number</h3>
-                  <div class="field">
-                    <br>
-                    <%= f.number_field :applicant_id%>
-                  </div>
+                    <div class="field">
+                      <%= f.label :applicant_id, "Apllicant ID Number" %><br>
+                      <%= f.number_field :applicant_id %>
+                    </div>
                 </div>
               </div>
             </section>
@@ -72,11 +79,10 @@
               <div class="box post">
                 <a href="#" class="image left"><img src="/assets/pic02.jpg" alt="" /></a>
                 <div class="inner">
-                   <h3> Client: ID Number</h3>
-                  <div class="field">
-                    <br>
-                    <%= f.number_field :client_id %>
-                  </div>
+                    <div class="field">
+                      <%= f.label :client_id %><br>
+                      <%= f.number_field :client_id %>
+                    </div>
                 </div>
               </div>
             </section>
@@ -86,11 +92,10 @@
               <div class="box post">
                 <a href="#" class="image left"><img src="/assets/pic03.jpg" alt="" /></a>
                 <div class="inner">
-                  <h3>Investigation Status</h3>
-                <div class="field">
-                  <br>
-                  <%= f.select :status, [['Recommended','Recommended'],['Not Recommended','Not Recommended'],['-------------','Unsure'],['Pending','Pending'],['Temporary'],['Temporary'],['Withdrawn','Withdrawn']] %>
-                </div>
+                  <div class="field">
+                    <%= f.label :status, "Application Status" %><br>
+                                <%= f.select :status, [['Recommended','Recommended'],['Not Recommended','Not Recommended'],['-------------','Unsure'],['Pending','Pending'],['Temporary'],['Temporary'],['Withdrawn','Withdrawn']] %>
+                  </div>
                 </div>
               </div>
             </section>
@@ -98,9 +103,8 @@
               <div class="box post">
                 <a href="#" class="image left"><img src="/assets/pic04.jpg" alt="" /></a>
                 <div class="inner">
-                  <h3>Renewal Date</h3>
                   <div class="field">
-                    <br>
+                    <%= f.label :renewal %><br>
                     <%= f.date_field :renewal %>
                   </div>
                 </div>
@@ -114,11 +118,10 @@
       <section id="cta" class="wrapper style3">
         <div class="container">
           <header>
-            <h2>CLICK HERE TO SUBMIT YOUR INVESTIGATION FOR REVIEW</h2>
+            <h2>CLICK HERE TO SUBMIT YOUR APPLICATION FOR REVIEW</h2>
+              <div class="actions">
+                <%= f.submit "Submit"%>
               </div>
-                <div class="actions">
-                  <%= f.submit "Submit"%>
-                </div>
           </header>
         </div>
       </section>

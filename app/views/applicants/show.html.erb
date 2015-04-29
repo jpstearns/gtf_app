@@ -78,7 +78,7 @@
                 <tr>
                   <td>Company: <%= @applicant.company %></td>
                   <td>Type: <%= @applicant.typeOfApplication %></td>
-                  <td></td>
+                  <td>Applicant ID: <%=@applicant.id%></td>
                 </tbody>
                 </table>
                 </div>
@@ -91,5 +91,3 @@
         </div>
       </section>
 
-<%= link_to 'Edit', edit_applicant_path(@investigation) %> |
-<%= link_to 'Back', applicants_path %>

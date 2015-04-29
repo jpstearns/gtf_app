@@ -10,7 +10,6 @@ class InvestigationsController < ApplicationController
   # GET /investigations/1
   # GET /investigations/1.json
   def show
-    
   end
 
   # GET /investigations/new
@@ -25,7 +24,9 @@ class InvestigationsController < ApplicationController
   # POST /investigations
   # POST /investigations.json
   def create
-    @investigation = Investigation.new(investigation_params)
+    render plain: params[:investigation].inspect
+    #@investigation = Investigation.new(investigation_params)
+
     respond_to do |format|
       if @investigation.save
         format.html { redirect_to @investigation, notice: 'Investigation was successfully created.' }
@@ -69,6 +70,6 @@ class InvestigationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def investigation_params
-      params.require(:investigation).permit(:applicant_social, :user_badge_number, :cient_id, :status, :renewal)
+      params.require(:investigation).permit(:applicant_id, :client_id, :user_badge_number, :status, :renewal, :comments)
     end
 end
