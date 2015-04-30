@@ -24,8 +24,8 @@ class InvestigationsController < ApplicationController
   # POST /investigations
   # POST /investigations.json
   def create
-    render plain: params[:investigation].inspect
-    #@investigation = Investigation.new(investigation_params)
+    
+    @investigation = Investigation.new(investigation_params)
 
     respond_to do |format|
       if @investigation.save
