@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20150429052148) do
     t.text     "comments"
     t.string   "dob"
     t.boolean  "typeOfApplication"
+    t.string   "position"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
   end

@@ -42,6 +42,7 @@
                       <%= f.input :social, placeholder: "###-##-####", label: "SSN or EIN Number" %>
                       <%= f.input :dob, label:"Date Of Birth", placeholder: "mm/dd/yyyy"%>
                       <%= f.input :company, label: "Affiliated Company" %>
+                      <%= f.input :position, :collection => [['Cage Cashier','Cage Cashier'],['Dealer','Dealer'],['Key Employee','Key Employee'],['Security','Security'],['Table Games Supervisor','Table Games Supervisor'],['Other (specify in comments)','Other']] %>
                       <%= f.input :comments, placeholder:"149 character limit on each comment..." %>
                   </article>
 
