@@ -15,14 +15,14 @@
       <a href="">Case Management</a>
     <ul>
       <li><%= link_to "New Case", new_investigation_path%></li>
-      <li><a href="#">Open Cases</a></li>
+      <li><a onclick="return alert('Detective, you will need the administrator rights to make access this page. This function is meant for the Sergeant.')">Open Cases</a></li>
       <li>
         <a href="">Search Records</a>
         <ul>
           <li><%= link_to "Cases", investigations_path %> </li>
           <li ><%= link_to "Applicants", applicants_path %></li>
           <li><%= link_to "Clients", clients_path%></li>
-          <li><a href="#">All Detectives</a></li>
+          <li><a onclick="return alert('Detective, you will need the administrator rights to make access this page. This function is meant for the Sergeant.')">All Detectives</a></li>
         </ul>
       </li>
       <li><%= link_to "Calendar", calendar_show_path %></li>
@@ -31,7 +31,7 @@
   <li><%= link_to "Client", clients_new_path %></li>
   <li><%= link_to "Applicant", new_applicant_path%></li>
   <li><%= link_to "About Us", about_us_about_path %></li>
-  <li><a href="#footer">Support</a></li>       
+  <li><a onclick="return alert('Detective, you will need the administrator rights to make access this page. This function is meant for the Sergeant.'">Support</a></li>       
 </ul>
 </nav>
 </div>
