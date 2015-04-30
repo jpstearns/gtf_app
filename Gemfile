@@ -38,6 +38,7 @@ gem "font-awesome-rails"
 gem "simple_calendar", "~> 1.1.0"
 gem 'therubyracer'
 gem 'bootstrap-datepicker-rails'
+gem 'high_voltage'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
